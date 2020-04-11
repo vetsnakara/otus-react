@@ -6,8 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --config ./webpack/webpack.config.js --env.env=dev",
     "build": "webpack --config ./webpack/webpack.config.js --env.env=prod",
-    "lint": "npx eslint --ext .js,.jsx,.ts,.tsx ./src",
-    "test": "jest",
+    "lint": "npx eslint --fix --ext .js,.jsx,.ts,.tsx ./src",
+    "test": "jest --passWithNoTests",
     "commit": "npx git-cz",
     "serve": "serve ./build"
   },
@@ -17,10 +17,13 @@
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
+    "@babel/preset-react": "^7.9.4",
     "@babel/preset-typescript": "^7.9.0",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "@types/jest": "^25.1.4",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.6",
     "@typescript-eslint/eslint-plugin": "^2.26.0",
     "@typescript-eslint/parser": "^2.26.0",
     "babel-jest": "^25.2.6",
@@ -58,7 +61,10 @@
     }
   },
   "dependencies": {
+    "eslint-plugin-react": "^7.19.0",
     "html-webpack-plugin": "^4.0.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "webpack-merge": "^4.2.2"
   }
 }
