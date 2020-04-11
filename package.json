@@ -9,6 +9,7 @@
     "calc": "ts-node src/calc",
     "lint": "npx eslint --fix --ext .js,.jsx,.ts,.tsx ./src",
     "test": "jest",
+    "test:dev": "jest --watch",
     "commit": "npx git-cz",
     "serve": "serve ./build"
   },
