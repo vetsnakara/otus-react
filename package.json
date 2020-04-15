@@ -8,6 +8,13 @@
     "build": "webpack --config ./webpack/webpack.config.js --env.env=prod",
     "lint": "npx eslint --fix --ext .js,.jsx,.ts,.tsx ./src",
     "test": "jest --passWithNoTests",
+    "test:dev": "jest --watch",
+    "storybook:start": "start-storybook -p 9009",
+    "storybook:build": "build-storybook",
+    "loki:test": "npm run storybook:build && npx loki test --reactUri file:./storybook-static",
+    "loki:update": "npm run storybook:build && npx loki update --reactUri file:./storybook-static",
+    "loki:approve": "npx loki approve",
+    "check": "npm run lint && npm test && npm run loki:test",
     "commit": "npx git-cz",
     "serve": "serve ./build"
   },
@@ -21,6 +28,12 @@
     "@babel/preset-typescript": "^7.9.0",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-knobs": "^5.3.18",
+    "@storybook/addon-links": "^5.3.18",
+    "@storybook/addon-storyshots": "^5.3.18",
+    "@storybook/addon-storysource": "^5.3.18",
+    "@storybook/react": "^5.3.18",
     "@types/jest": "^25.1.4",
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.6",
@@ -31,6 +44,8 @@
     "clean-webpack-plugin": "^3.0.0",
     "commitizen": "^4.0.3",
     "copy-webpack-plugin": "^5.1.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.1",
     "eslint-config-standard": "^14.1.1",
@@ -41,7 +56,9 @@
     "eslint-plugin-standard": "^4.0.1",
     "husky": "^4.2.3",
     "jest": "^25.2.6",
+    "loki": "^0.20.3",
     "prettier": "^2.0.2",
+    "react-test-renderer": "^16.13.1",
     "serve": "^11.3.0",
     "typescript": "^3.8.3",
     "webpack": "^4.42.1",
@@ -51,8 +68,8 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "npm run lint && npm test",
-      "pre-push": "npm run lint && npm test"
+      "pre-commit": "npm run check",
+      "pre-push": "npm run check"
     }
   },
   "config": {
@@ -66,5 +83,20 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "webpack-merge": "^4.2.2"
+  },
+  "loki": {
+    "configurations": {
+      "chrome.laptop": {
+        "target": "chrome.app",
+        "width": 1366,
+        "height": 768,
+        "deviceScaleFactor": 1,
+        "mobile": false
+      },
+      "chrome.iphone7": {
+        "target": "chrome.app",
+        "preset": "iPhone 7"
+      }
+    }
   }
 }
