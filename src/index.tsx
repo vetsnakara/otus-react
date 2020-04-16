@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import ClickCounter from './components/ClickCounter'
-
-ReactDOM.render(<ClickCounter start={2} />, document.querySelector('#root'))
+ReactDOM.render(
+  <h1>App should be here ...</h1>,
+  document.querySelector('#root')
+)
