@@ -9,7 +9,7 @@ export default {
   title: 'Task',
   component: Task,
   excludeStories: /.*Data$/,
-  decorators: [withKnobs]
+  decorators: [withKnobs, (story) => <div className="container">{story()}</div>]
 }
 
 const taskData = {

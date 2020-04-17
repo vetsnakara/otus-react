@@ -8,7 +8,6 @@
     "build": "webpack --config ./webpack/webpack.config.js --env.env=prod",
     "lint": "npx eslint --fix --ext .js,.jsx,.ts,.tsx ./src",
     "test": "jest --passWithNoTests",
-    "test:dev": "jest --watch",
     "storybook:start": "start-storybook -p 9009",
     "storybook:build": "build-storybook",
     "loki:test": "npm run storybook:build && npx loki test --reactUri file:./storybook-static",

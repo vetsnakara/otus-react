@@ -1,17 +1,13 @@
 import React from 'react'
-import { shallow, ShallowWrapper } from 'enzyme'
+import { shallow } from 'enzyme'
 
-import Task, { Props as TaskProps } from './Task'
+import type { TaskProps, TaskData, TaskActions } from '../../interfaces'
 
-interface SetupProps {
-  title?: string
-  completed?: boolean
-  onToggleComplete?: () => void
-  onRemove?: () => void
-}
+import Task from './Task'
 
-const findByDataAttr = (wrapper: ShallowWrapper, val: string) =>
-  wrapper.find(`[data-test="${val}"]`)
+import { findByDataAttr } from '../../../internals/testUtils'
+
+interface SetupProps extends Partial<TaskData>, Partial<TaskActions> {}
 
 const setup = ({
   title = 'Hello',
@@ -39,7 +35,7 @@ describe(`Task`, () => {
     const task = findByDataAttr(wrapper, 'task')
     expect(task.length).toBe(1)
 
-    const completeBtn = findByDataAttr(wrapper, 'task-complete-btn')
+    const completeBtn = findByDataAttr(wrapper, 'task-toggle-btn')
     expect(completeBtn.length).toBe(1)
 
     const taskTitle = findByDataAttr(wrapper, 'task-title')
@@ -50,7 +46,7 @@ describe(`Task`, () => {
     const onToggleComplete = jest.fn()
     const wrapper = setup({ onToggleComplete })
 
-    const completeBtn = findByDataAttr(wrapper, 'task-complete-btn')
+    const completeBtn = findByDataAttr(wrapper, 'task-toggle-btn')
     completeBtn.simulate('click')
     expect(onToggleComplete).toHaveBeenCalledTimes(1)
   })
