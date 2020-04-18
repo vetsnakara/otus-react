@@ -5,7 +5,8 @@ import type { TaskListProps } from '../../interfaces'
 
 import TaskList from './TaskList'
 
-import { getTasks, findByDataAttr } from '../../../internals/testUtils'
+import { findByDataAttr } from '../../../internals/testUtils'
+import { getTasks } from '../../data'
 
 interface SetupProps extends Partial<TaskListProps> {
   useMount?: boolean

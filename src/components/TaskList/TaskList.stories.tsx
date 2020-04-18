@@ -1,7 +1,7 @@
 import React from 'react'
 import { actions } from '@storybook/addon-actions'
 
-import { getTasks } from '../../../internals/testUtils'
+import { getTasks } from '../../data'
 
 import TaskList from './TaskList'
 

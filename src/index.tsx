@@ -1,7 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import Tasks from './components/Tasks'
+import TaskList from './components/TaskList'
+
+import { getTasks } from './data'
+
+const tasks = getTasks({
+  titles: ['One', 'Two', 'Three']
+})
+
 ReactDOM.render(
-  <h1>App should be here ...</h1>,
+  <Tasks tasks={tasks} ListComponent={TaskList} />,
   document.querySelector('#root')
 )
