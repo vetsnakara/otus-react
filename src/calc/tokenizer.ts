@@ -1,36 +1,4 @@
-export enum TokenType {
-  NUMBER,
-  OP_UNARY,
-  OP_BINARY
-}
-
-export enum Operation {
-  PLUS = '+',
-  MINUS = '-',
-  MULT = '*',
-  DIV = '/',
-  POW = '^',
-  SQUARE = '**',
-  FACTORIAL = '!'
-}
-
-export type TokenValue = number | Operation
-
-type Token = {
-  type: TokenType
-  value: TokenValue
-  operand?: number
-}
-
-export function token([type, value, operand]: [
-  TokenType,
-  TokenValue,
-  number?
-]): Token {
-  let tok: Token = { type, value }
-  if (operand) tok = { ...tok, operand }
-  return tok
-}
+import { Token, TokenType, Operation } from './types'
 
 export function tokenizer(line: string): Token[] {
   const parts = line.trim().split(' ').filter(Boolean)

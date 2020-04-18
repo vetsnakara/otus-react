@@ -1,4 +1,6 @@
-import { tokenizer, token, TokenType, Operation } from '../tokenizer'
+import { tokenizer } from '../tokenizer'
+import { token } from '../utils'
+import { TokenType, Operation } from '../types'
 
 describe('Tokenizer', () => {
   // Valid cases
