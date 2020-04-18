@@ -1,29 +1,29 @@
-export type ScalarOperationType = (first: number, second: number) => number
+export type BinaryOperationType = (first: number, second: number) => number
 export type UnaryOperationType = (operand: number) => number
 
-export type OperationType = UnaryOperationType | ScalarOperationType
+export type OperationType = UnaryOperationType | BinaryOperationType
 
-export const mul: ScalarOperationType = (
+export const mul: BinaryOperationType = (
   first: number,
   second: number
 ): number => first * second
 
-export const div: ScalarOperationType = (
+export const div: BinaryOperationType = (
   first: number,
   second: number
 ): number => first / second
 
-export const add: ScalarOperationType = (
+export const add: BinaryOperationType = (
   first: number,
   second: number
 ): number => first + second
 
-export const minus: ScalarOperationType = (
+export const minus: BinaryOperationType = (
   first: number,
   second: number
 ): number => first - second
 
-export const pow: ScalarOperationType = (
+export const pow: BinaryOperationType = (
   base: number,
   exponent: number
 ): number => {
