@@ -7,9 +7,8 @@
     "start": "webpack-dev-server --config ./webpack/webpack.config.js --env.env=dev",
     "build": "webpack --config ./webpack/webpack.config.js --env.env=prod",
     "calc": "ts-node src/calc",
-    "lint": "npx eslint --fix --ext .js,.jsx,.ts,.tsx ./src",
+    "lint": "npx eslint --fix --ext .js,.jsx,.ts,.tsx  ./src",
     "test": "jest",
-    "test:dev": "jest --watch",
     "commit": "npx git-cz",
     "serve": "serve ./build"
   },
