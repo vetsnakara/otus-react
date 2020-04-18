@@ -1,4 +1,4 @@
-import { mul, div, add, minus, square, pow, fact } from './mathOperators'
+import { mul, div, add, minus, square, pow, fact } from '../mathOperators'
 
 describe('mathOperators test cases', () => {
   describe('Multiplication', () => {

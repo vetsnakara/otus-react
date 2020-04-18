@@ -1,4 +1,4 @@
-import { firstPrioritiesCalc, secondPrioritiesCalc } from './engine'
+import { firstPrioritiesCalc, secondPrioritiesCalc } from '../engine'
 
 describe('firstPrioritiesCalc simple cases', () => {
   it('[1, * 32]', () => {

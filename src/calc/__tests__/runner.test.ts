@@ -1,4 +1,4 @@
-import { runner } from './runner'
+import { runner } from '../runner'
 
 describe('Runner simple cases', () => {
   it('1 * 32', () => {

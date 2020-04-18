@@ -1,4 +1,4 @@
-import { parser } from './parser'
+import { parser } from '../parser'
 
 describe('Parser correct cases', () => {
   it('1 + 32', () => {
