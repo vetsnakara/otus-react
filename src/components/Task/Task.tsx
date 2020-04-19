@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import React from 'react'
 import cn from 'classnames'
 
 import type { TaskProps } from '../../interfaces'
@@ -11,7 +11,7 @@ const Task: React.FC<TaskProps> = ({
   task: { title, completed = false },
   onToggleComplete,
   onRemove
-}): ReactElement => (
+}) => (
   <div data-test="task" className="task">
     <button
       data-test="task-toggle-btn"

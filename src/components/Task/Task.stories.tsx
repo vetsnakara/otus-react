@@ -1,9 +1,12 @@
-import React, { ReactElement } from 'react'
+import React from 'react'
 
 import { actions } from '@storybook/addon-actions'
 import { withKnobs, text, boolean } from '@storybook/addon-knobs'
 
+import { TaskData } from '../../interfaces'
 import Task from './Task'
+
+import { veryLongTitle } from '../../../internals/testUtils'
 
 export default {
   title: 'Task',
@@ -12,33 +15,41 @@ export default {
   decorators: [withKnobs, (story) => <div className="container">{story()}</div>]
 }
 
-const taskData = {
+// default task data
+const taskData: TaskData = {
   title: 'My awesome task',
   completed: false
 }
 
+// task data with knobs
 const taskDataWithKnobs = () => ({
   title: text('title', 'My awesome task'),
   completed: boolean('completed', false)
 })
 
+// task actions
 const taskActions = actions({
   onToggleComplete: 'Toggle task complete',
   onRemove: 'Remove'
 })
 
-const veryLongTitle = Array.from(Array(20).keys())
-  .map(() => 'Very long title.')
-  .join(' ')
-
-export const Default: React.FC<{}> = (): ReactElement => (
+/**
+ * Default task
+ */
+export const Default: React.FC<{}> = () => (
   <Task task={{ ...taskDataWithKnobs() }} {...taskActions} />
 )
 
-export const LongTitle: React.FC<{}> = (): ReactElement => (
+/**
+ * Task with long title
+ */
+export const LongTitle: React.FC<{}> = () => (
   <Task task={{ ...taskData, title: veryLongTitle }} {...taskActions} />
 )
 
-export const Completed: React.FC<{}> = (): ReactElement => (
+/**
+ * Competed task
+ */
+export const Completed: React.FC<{}> = () => (
   <Task task={{ ...taskData, completed: true }} {...taskActions} />
 )
