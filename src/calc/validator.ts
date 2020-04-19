@@ -6,7 +6,7 @@ export function validator(tokens: Token[]): Token[] {
       if (i === 0 || tokens[i - 1].type === TokenType.OP_BINARY) {
         return [...acc, token]
       } else {
-        throw new Error('Parser: not valid expression')
+        throw new Error('Validator: not valid expression')
       }
     } else if (token.type === TokenType.OP_BINARY) {
       if (
@@ -17,10 +17,10 @@ export function validator(tokens: Token[]): Token[] {
       ) {
         return [...acc, token]
       } else {
-        throw new Error('Parser: unknown token')
+        throw new Error('Validator: unexpected token')
       }
     } else {
-      throw new Error('Parser: not valid expression')
+      throw new Error('Validator: not valid expression')
     }
   }, [])
 }

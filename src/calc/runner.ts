@@ -1,19 +1,11 @@
-import { parser } from './parser'
-
-import { firstPrioritiesCalc, secondPrioritiesCalc } from './engine'
+import { tokenizer } from './tokenizer'
+import { validator } from './validator'
+import { evaluator } from './evaluator'
 
 export const runner = (line: string): number => {
-  const stack = parser(line)
+  const tokens = tokenizer(line)
+  const tokenExpression = validator(tokens)
+  const result = evaluator(tokenExpression)
 
-  if (stack === null) {
-    throw new TypeError('Unexpected string')
-  }
-
-  const firstPrioritiesRes = firstPrioritiesCalc(stack)
-
-  if (firstPrioritiesRes.length === 1) {
-    return Number(firstPrioritiesRes[0])
-  }
-
-  return secondPrioritiesCalc(firstPrioritiesRes)
+  return result.value as number
 }

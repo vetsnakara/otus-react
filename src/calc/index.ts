@@ -8,21 +8,29 @@ const rl = createInterface({
 })
 
 const question = (): Promise<null> =>
-  new Promise((resolve) => {
+  new Promise((resolve, reject) => {
     rl.question('> ', (answer: string) => {
-      const result = runner(answer)
-
-      if (result) {
-        console.log(`Result: ${result}`)
+      if (!answer.trim()) {
+        return resolve()
       }
 
-      resolve()
+      try {
+        const result = runner(answer)
+        console.log(`Result: ${result}`)
+        resolve()
+      } catch (err) {
+        reject(err)
+      }
     })
   })
 
 async function app(): Promise<null> {
   while (true) {
-    await question()
+    try {
+      await question()
+    } catch (error) {
+      console.log(error.message)
+    }
   }
 }
 

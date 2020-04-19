@@ -9,7 +9,7 @@ import { token as getToken } from './utils'
 import { Token, TokenType, Operation } from './types'
 
 // unary operations **, !
-function evaluateUnary(expr: Token[]): Token[] {
+export function evaluateUnary(expr: Token[]): Token[] {
   return expr.reduce((acc, token) => {
     if (token.type === TokenType.OP_UNARY) {
       const operation = mathOperators[token.value] as UnaryOperationType
@@ -20,7 +20,7 @@ function evaluateUnary(expr: Token[]): Token[] {
   }, [])
 }
 
-function evaluatePow(expr: Token[]): Token[] {
+export function evaluatePow(expr: Token[]): Token[] {
   // binary operation ^
   const result = [...expr]
 
@@ -46,7 +46,7 @@ function evaluatePow(expr: Token[]): Token[] {
   return result
 }
 
-function evaluateMultDiv(expr: Token[]): Token[] {
+export function evaluateMultDiv(expr: Token[]): Token[] {
   // binary operations *, /
   const result = [...expr]
 
@@ -76,7 +76,7 @@ function evaluateMultDiv(expr: Token[]): Token[] {
   return result
 }
 
-function evaluatePlusMinus(expr: Token[]): Token[] {
+export function evaluatePlusMinus(expr: Token[]): Token[] {
   // binary operations +, /
   const result = [...expr]
 
