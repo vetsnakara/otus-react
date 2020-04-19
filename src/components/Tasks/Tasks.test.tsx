@@ -23,16 +23,13 @@ describe('Tasks', () => {
       titles: ['One', 'Two', 'Three']
     })
 
+    const spy = jest.spyOn(Tasks.prototype, 'handleToggleComplete')
+
     const wrapper = mount(<Tasks tasks={tasks} ListComponent={TaskList} />)
 
     const index = 1
 
     expect(wrapper.state('tasks')[index].completed).toBe(false)
-
-    const spy = jest.spyOn(wrapper.instance(), 'handleToggleComplete')
-
-    // https://github.com/enzymejs/enzyme/issues/365#issuecomment-362166762
-    wrapper.instance().forceUpdate()
 
     const task = findByDataAttr(wrapper, 'task').at(index)
     const toggleButton = findByDataAttr(task, 'task-toggle-btn')
@@ -50,14 +47,11 @@ describe('Tasks', () => {
       titles: ['One', 'Two', 'Three']
     })
 
+    const spy = jest.spyOn(Tasks.prototype, 'handleRemove')
+
     const wrapper = mount(<Tasks tasks={tasks} ListComponent={TaskList} />)
 
     const index = 1
-
-    const spy = jest.spyOn(wrapper.instance(), 'handleRemove')
-
-    // https://github.com/enzymejs/enzyme/issues/365#issuecomment-362166762
-    wrapper.instance().forceUpdate()
 
     const task = findByDataAttr(wrapper, 'task').at(index)
     const toggleButton = findByDataAttr(task, 'task-remove-btn')

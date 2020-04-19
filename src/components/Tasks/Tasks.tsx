@@ -24,9 +24,12 @@ class Tasks extends Component<TasksProps, TasksState> {
     this.state = {
       tasks: props.tasks
     }
+
+    this.handleToggleComplete = this.handleToggleComplete.bind(this)
+    this.handleRemove = this.handleRemove.bind(this)
   }
 
-  handleToggleComplete = (id: string) => {
+  handleToggleComplete(id: string) {
     this.setState(({ tasks }) => ({
       tasks: tasks.map((task) =>
         task.id === id ? { ...task, completed: !task.completed } : task
@@ -34,7 +37,7 @@ class Tasks extends Component<TasksProps, TasksState> {
     }))
   }
 
-  handleRemove = (id: string) => {
+  handleRemove(id: string) {
     this.setState(({ tasks }) => ({
       tasks: tasks.filter((task) => task.id !== id)
     }))
