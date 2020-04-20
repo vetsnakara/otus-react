@@ -9,15 +9,24 @@ import './styles.scss'
 type ListComponentInterface = React.FC<TaskListProps>
 
 interface TasksProps {
+  /**
+   * List of tasks
+   */
   tasks: Array<TaskListItemData>
+  /**
+   * Component to render tasks
+   */
   ListComponent: ListComponentInterface
 }
 
 interface TasksState {
+  /**
+   * List of tasks
+   */
   tasks: Array<TaskListItemData>
 }
 
-class Tasks extends Component<TasksProps, TasksState> {
+export class Tasks extends Component<TasksProps, TasksState> {
   private ListComponent: ListComponentInterface
 
   constructor(props: TasksProps) {

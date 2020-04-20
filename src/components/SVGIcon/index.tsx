@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 
 type IconName = 'check' | 'cancel'
 
@@ -41,7 +41,7 @@ const getPath = (name: string, props: { fill: string }) => {
   }
 }
 
-const SVGIcon: React.FC<Props> = ({
+const SVGIcon: FC<Props> = ({
   name,
   style = {},
   fill = '#000',

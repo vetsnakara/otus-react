@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 
 import Task from '../Task'
 
@@ -6,7 +6,7 @@ import { TaskListProps } from '../../interfaces'
 
 import './styles.scss'
 
-const TaskList: React.FC<TaskListProps> = ({
+const TaskList: FC<TaskListProps> = ({
   tasks = [],
   onToggleComplete,
   onRemove

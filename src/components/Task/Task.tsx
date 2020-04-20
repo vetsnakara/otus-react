@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import cn from 'classnames'
 
 import type { TaskProps } from '../../interfaces'
@@ -7,7 +7,7 @@ import Icon from '../SVGIcon'
 
 import './styles.scss'
 
-const Task: React.FC<TaskProps> = ({
+export const Task: FC<TaskProps> = ({
   task: { title, completed = false },
   onToggleComplete,
   onRemove
