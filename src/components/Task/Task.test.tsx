@@ -8,6 +8,9 @@ import { findByDataAttr } from '../../../internals/testUtils'
 
 interface SetupProps extends Partial<TaskData>, Partial<TaskActions> {}
 
+/**
+ * Task wrapper factory function
+ */
 const setup = ({
   title = 'Hello',
   completed,
@@ -27,12 +30,8 @@ const setup = ({
 }
 
 describe(`Task`, () => {
-  /**
-   * Task is rendered correctly
-   */
   test(`Renders correctly`, () => {
     const title = 'Hello'
-
     const wrapper = setup({ title })
 
     // task is rendered
@@ -40,21 +39,18 @@ describe(`Task`, () => {
     expect(task.length).toBe(1)
 
     // toggle btn is rendered
-    const completeBtn = findByDataAttr(wrapper, 'task-toggle-btn')
+    const completeBtn = findByDataAttr(task, 'task-toggle-btn')
     expect(completeBtn.length).toBe(1)
 
     // remove btn is rendered
-    const removeBtn = findByDataAttr(wrapper, 'task-remove-btn')
+    const removeBtn = findByDataAttr(task, 'task-remove-btn')
     expect(removeBtn.length).toBe(1)
 
     // title value is expected
-    const taskTitle = findByDataAttr(wrapper, 'task-title')
-    expect(taskTitle.text()).toBe(title)
+    const taskTitle = findByDataAttr(task, 'task-title')
+    expect(taskTitle.text()).toContain(title)
   })
 
-  /**
-   * Complete btn callback is called properly
-   */
   test(`Click 'complete' button`, () => {
     const onToggleComplete = jest.fn()
     const wrapper = setup({ onToggleComplete })
@@ -64,9 +60,6 @@ describe(`Task`, () => {
     expect(onToggleComplete).toHaveBeenCalledTimes(1)
   })
 
-  /**
-   * Remove btn callback is called properly
-   */
   test(`Click 'remove' button`, () => {
     const onRemove = jest.fn()
     const wrapper = setup({ onRemove })

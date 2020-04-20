@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 
 import { actions } from '@storybook/addon-actions'
 import { withKnobs, text, boolean } from '@storybook/addon-knobs'
@@ -12,7 +12,7 @@ export default {
   title: 'Task',
   component: Task,
   excludeStories: /.*Data$/,
-  decorators: [withKnobs, (story) => <div className="container">{story()}</div>]
+  decorators: [withKnobs]
 }
 
 // default task data
@@ -36,20 +36,20 @@ const taskActions = actions({
 /**
  * Default task
  */
-export const Default: React.FC<{}> = () => (
+export const Default: FC<{}> = () => (
   <Task task={{ ...taskDataWithKnobs() }} {...taskActions} />
 )
 
 /**
  * Task with long title
  */
-export const LongTitle: React.FC<{}> = () => (
+export const LongTitle: FC<{}> = () => (
   <Task task={{ ...taskData, title: veryLongTitle }} {...taskActions} />
 )
 
 /**
  * Competed task
  */
-export const Completed: React.FC<{}> = () => (
+export const Completed: FC<{}> = () => (
   <Task task={{ ...taskData, completed: true }} {...taskActions} />
 )

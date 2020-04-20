@@ -11,9 +11,7 @@ const TaskList: React.FC<TaskListProps> = ({
   onToggleComplete,
   onRemove
 }) => {
-  if (tasks.length === 0) {
-    return <p data-test="task-list-empty">You have no tasks</p>
-  }
+  if (tasks.length === 0) return null
 
   return (
     <ul className="task-list" data-test="task-list">

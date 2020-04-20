@@ -47,6 +47,10 @@ class Tasks extends Component<TasksProps, TasksState> {
     const { tasks } = this.state
     const ListComponent = this.ListComponent
 
+    if (tasks.length === 0) {
+      return <p>No tasks</p>
+    }
+
     return (
       <ListComponent
         tasks={tasks}
