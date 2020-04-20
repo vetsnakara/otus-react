@@ -57,8 +57,8 @@ class Tasks extends Component<TasksProps, TasksState> {
           <div className="tasks__no-tasks-icon">
             <Icon name="check" />
           </div>
-          <h2 className="tasks__no-tasks-title">You have no tasks</h2>
-          <p className="tasks__no-tasks-subtitle">Sit back and relax</p>
+          <h2>You have no tasks</h2>
+          <p>Sit back and relax</p>
         </section>
       )
     }

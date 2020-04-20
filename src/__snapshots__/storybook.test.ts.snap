@@ -783,14 +783,10 @@ exports[`Storyshots Tasks Without Tasks 1`] = `
         />
       </svg>
     </div>
-    <h2
-      className="tasks__no-tasks-title"
-    >
+    <h2>
       You have no tasks
     </h2>
-    <p
-      className="tasks__no-tasks-subtitle"
-    >
+    <p>
       Sit back and relax
     </p>
   </section>
