@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 
 import type { TaskListProps, TaskListItemData } from '../../interfaces'
 
+import Icon from '../SVGIcon'
+
+import './styles.scss'
+
 type ListComponentInterface = React.FC<TaskListProps>
 
 interface TasksProps {
@@ -48,7 +52,15 @@ class Tasks extends Component<TasksProps, TasksState> {
     const ListComponent = this.ListComponent
 
     if (tasks.length === 0) {
-      return <p>No tasks</p>
+      return (
+        <section className="tasks__no-tasks-box" data-test="no-tasks-message">
+          <div className="tasks__no-tasks-icon">
+            <Icon name="check" />
+          </div>
+          <h2 className="tasks__no-tasks-title">You have no tasks</h2>
+          <p className="tasks__no-tasks-subtitle">Sit back and relax</p>
+        </section>
+      )
     }
 
     return (

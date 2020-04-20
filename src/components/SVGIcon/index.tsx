@@ -1,7 +1,9 @@
 import React from 'react'
 
+type IconName = 'check' | 'cancel'
+
 interface Props {
-  name: string
+  name: IconName
   style?: object
   fill?: string
   viewBox?: string
