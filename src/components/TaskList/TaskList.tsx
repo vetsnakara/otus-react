@@ -1,12 +1,12 @@
 import React, { FC } from 'react'
 
-import Task from '../Task'
+import { Task } from '../Task'
 
 import { TaskListProps } from '../../interfaces'
 
 import './styles.scss'
 
-const TaskList: FC<TaskListProps> = ({
+export const TaskList: FC<TaskListProps> = ({
   tasks = [],
   onToggleComplete,
   onRemove
@@ -31,5 +31,3 @@ const TaskList: FC<TaskListProps> = ({
     </ul>
   )
 }
-
-export default TaskList

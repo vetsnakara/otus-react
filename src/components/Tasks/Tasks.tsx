@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import type { TaskListProps, TaskListItemData } from '../../interfaces'
 
-import Icon from '../SVGIcon'
+import { SVGIcon as Icon } from '../SVGIcon'
 
 import './styles.scss'
 
@@ -81,5 +81,3 @@ export class Tasks extends Component<TasksProps, TasksState> {
     )
   }
 }
-
-export default Tasks

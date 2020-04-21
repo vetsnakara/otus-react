@@ -41,7 +41,7 @@ const getPath = (name: string, props: { fill: string }) => {
   }
 }
 
-const SVGIcon: FC<Props> = ({
+export const SVGIcon: FC<Props> = ({
   name,
   style = {},
   fill = '#000',
@@ -62,5 +62,3 @@ const SVGIcon: FC<Props> = ({
     {getPath(name, { fill })}
   </svg>
 )
-
-export default SVGIcon

@@ -3,7 +3,7 @@ import cn from 'classnames'
 
 import type { TaskProps } from '../../interfaces'
 
-import Icon from '../SVGIcon'
+import { SVGIcon as Icon } from '../SVGIcon'
 
 import './styles.scss'
 
@@ -36,5 +36,3 @@ export const Task: FC<TaskProps> = ({
     </button>
   </div>
 )
-
-export default Task

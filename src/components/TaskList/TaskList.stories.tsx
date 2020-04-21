@@ -3,7 +3,7 @@ import { actions } from '@storybook/addon-actions'
 
 import { getTasks } from '../../data'
 
-import TaskList from './TaskList'
+import { TaskList } from './TaskList'
 
 export default {
   title: 'TaskList',

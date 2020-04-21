@@ -3,8 +3,8 @@ import { shallow, mount } from 'enzyme'
 
 import type { TaskListProps } from '../../interfaces'
 
-import Task from '../Task'
-import TaskList from './TaskList'
+import { Task } from '../Task'
+import { TaskList } from './TaskList'
 
 import { findByDataAttr } from '../../../internals/testUtils'
 import { getTasks } from '../../data'

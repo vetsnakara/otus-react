@@ -4,7 +4,7 @@ import { actions } from '@storybook/addon-actions'
 import { withKnobs, text, boolean } from '@storybook/addon-knobs'
 
 import { TaskData } from '../../interfaces'
-import Task from './Task'
+import { Task } from './Task'
 
 import { veryLongTitle } from '../../../internals/testUtils'
 

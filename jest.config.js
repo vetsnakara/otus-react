@@ -2,6 +2,7 @@ module.exports = {
   clearMocks: true,
   coverageDirectory: "coverage",
   testEnvironment: "jsdom",
+  testPathIgnorePatterns: ["storybook-static"],
   setupFilesAfterEnv: [
     "<rootDir>/internals/jestSettings.js"
   ],

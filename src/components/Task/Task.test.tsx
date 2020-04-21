@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 
 import type { TaskProps, TaskData, TaskActions } from '../../interfaces'
-import Task from './Task'
+import { Task } from './Task'
 
 import { findByDataAttr } from '../../../internals/testUtils'
 
