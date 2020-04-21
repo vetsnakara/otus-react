@@ -1,10 +1,10 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import type { TaskProps, TaskData, TaskActions } from '../../interfaces'
+import type { TaskProps, TaskData, TaskActions } from 'types'
 import { Task } from './Task'
 
-import { findByDataAttr } from '../../../internals/testUtils'
+import { findByDataAttr } from 'test/helpers'
 
 interface SetupProps extends Partial<TaskData>, Partial<TaskActions> {}
 

@@ -1,4 +1,4 @@
-import type { TaskListItemData } from '../src/interfaces'
+import type { TaskListItemData } from 'types'
 
 export const getTasks = ({
   titles,

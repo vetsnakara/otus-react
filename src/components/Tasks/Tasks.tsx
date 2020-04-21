@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import type { TaskListProps, TaskListItemData } from '../../interfaces'
+import type { TaskListProps, TaskListItemData } from 'types'
 
 import { SVGIcon as Icon } from '../SVGIcon'
 

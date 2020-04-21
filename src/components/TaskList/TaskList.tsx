@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 
 import { Task } from '../Task'
 
-import { TaskListProps } from '../../interfaces'
+import { TaskListProps } from 'types'
 
 import './styles.scss'
 

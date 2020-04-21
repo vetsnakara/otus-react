@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { actions } from '@storybook/addon-actions'
 
-import { getTasks } from '../../data'
+import { getTasks } from 'data'
 
 import { TaskList } from './TaskList'
 

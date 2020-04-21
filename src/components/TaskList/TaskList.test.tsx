@@ -1,13 +1,13 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
 
-import type { TaskListProps } from '../../interfaces'
+import type { TaskListProps } from 'types'
 
 import { Task } from '../Task'
 import { TaskList } from './TaskList'
 
-import { findByDataAttr } from '../../../internals/testUtils'
-import { getTasks } from '../../data'
+import { findByDataAttr } from 'test/helpers'
+import { getTasks } from 'data'
 
 interface SetupProps extends Partial<TaskListProps> {
   useMount?: boolean

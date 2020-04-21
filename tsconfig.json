@@ -1,5 +1,11 @@
 {
   "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "types": ["./types"],
+      "data": ["../data"],
+      "test/*": ["../test/*"]
+    },
     "target": "es5",
     "module": "commonjs",
     "allowJs": true,

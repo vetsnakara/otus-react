@@ -4,8 +4,8 @@ import { mount, ReactWrapper } from 'enzyme'
 import { Tasks } from './Tasks'
 import { TaskList } from '../TaskList'
 
-import { getTasks } from '../../data'
-import { findByDataAttr } from '../../../internals/testUtils'
+import { getTasks } from 'data'
+import { findByDataAttr } from 'test/helpers'
 
 const getTasksState = (wrapper: ReactWrapper) => {
   return wrapper.state('tasks') as Array<{ completed: boolean }>

@@ -4,12 +4,15 @@ module.exports = {
   testEnvironment: "jsdom",
   testPathIgnorePatterns: ["storybook-static"],
   setupFilesAfterEnv: [
-    "<rootDir>/internals/jestSettings.js"
+    "<rootDir>/test/jestSettings.ts"
   ],
   transform: {
     "^.+\\.(js|jsx|ts|tsx)$": "babel-jest"
   },
   "moduleNameMapper": {
-    "\\.(css|less|s[ac]ss)$": "<rootDir>/internals/__mocks__/styleMock.js",
+    "\\.(css|less|s[ac]ss)$": "<rootDir>/test/__mocks__/styleMock.ts",
+    "^types(.*)$": "<rootDir>/src/types$1",
+    "^data(.*)$": "<rootDir>/data$1",
+    "^test(.*)$": "<rootDir>/test$1",
   }
 };

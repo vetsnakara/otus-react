@@ -35,15 +35,20 @@ module.exports = {
     new CleanWebpackPlugin(),
 
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './public/index.html'
     }),
 
     new CopyWebpackPlugin([
-      { from: 'src/favicon.ico' }
+      { from: './public/favicon.ico' }
     ])
   ],
 
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json']
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
+    alias: {
+      types: path.resolve(__dirname, "../src/types"),
+      data: path.resolve(__dirname, "../data"),
+      test: path.resolve(__dirname, "../test"),
+    }
   }
 }

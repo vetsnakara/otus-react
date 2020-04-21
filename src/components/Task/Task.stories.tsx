@@ -3,10 +3,10 @@ import React, { FC } from 'react'
 import { actions } from '@storybook/addon-actions'
 import { withKnobs, text, boolean } from '@storybook/addon-knobs'
 
-import { TaskData } from '../../interfaces'
+import { TaskData } from 'types'
 import { Task } from './Task'
 
-import { veryLongTitle } from '../../../internals/testUtils'
+import { veryLongTitle } from 'test/helpers'
 
 export default {
   title: 'Task',

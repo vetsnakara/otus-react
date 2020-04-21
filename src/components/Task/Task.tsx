@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import cn from 'classnames'
 
-import type { TaskProps } from '../../interfaces'
+import type { TaskProps } from 'types'
 
 import { SVGIcon as Icon } from '../SVGIcon'
 

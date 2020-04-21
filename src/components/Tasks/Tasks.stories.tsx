@@ -3,7 +3,7 @@ import React, { FC } from 'react'
 import { Tasks } from './Tasks'
 import { TaskList } from '../TaskList'
 
-import { getTasks } from '../../data'
+import { getTasks } from 'data'
 
 export default {
   title: 'Tasks',
