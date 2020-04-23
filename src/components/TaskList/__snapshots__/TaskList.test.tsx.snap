@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TaskList All tasks are rendered correctly 1`] = `[Function]`;
+
+exports[`TaskList Nothing is rendered if no tasks passed 1`] = `[Function]`;
+
+exports[`TaskList Remove callback is called properly 1`] = `[Function]`;
+
+exports[`TaskList Toggle callback is called properly 1`] = `[Function]`;

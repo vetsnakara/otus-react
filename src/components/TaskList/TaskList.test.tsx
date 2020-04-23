@@ -1,5 +1,6 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
+import renderer from 'react-test-renderer'
 
 import type { TaskListProps } from 'types'
 
@@ -26,14 +27,19 @@ const setup = ({
     onRemove
   }
 
-  return useMount
-    ? mount(<TaskList {...setupProps} />)
-    : shallow(<TaskList {...setupProps} />)
+  return {
+    snapshot: renderer.create(<TaskList {...setupProps} />).toJSON,
+    wrapper: useMount
+      ? mount(<TaskList {...setupProps} />)
+      : shallow(<TaskList {...setupProps} />)
+  }
 }
 
 describe('TaskList', () => {
   test('Nothing is rendered if no tasks passed', () => {
-    const wrapper = setup()
+    const { wrapper, snapshot } = setup()
+    expect(snapshot).toMatchSnapshot()
+
     const taskList = wrapper.find('TaskListContainer')
     expect(taskList.length).toBe(0)
   })
@@ -44,7 +50,13 @@ describe('TaskList', () => {
     const onToggleComplete = jest.fn()
     const onRemove = jest.fn()
 
-    const wrapper = setup({ tasks, onToggleComplete, onRemove, useMount: true })
+    const { wrapper, snapshot } = setup({
+      tasks,
+      onToggleComplete,
+      onRemove,
+      useMount: true
+    })
+    expect(snapshot).toMatchSnapshot()
 
     // item elements are rendered
     const items = wrapper.find('TaskListItem')
@@ -57,11 +69,12 @@ describe('TaskList', () => {
 
     const onToggleComplete = jest.fn()
 
-    const wrapper = setup({
+    const { wrapper, snapshot } = setup({
       useMount: true,
       tasks,
       onToggleComplete
     })
+    expect(snapshot).toMatchSnapshot()
 
     const toggleBtn = wrapper
       .find('Task')
@@ -81,11 +94,12 @@ describe('TaskList', () => {
 
     const onRemove = jest.fn()
 
-    const wrapper = setup({
+    const { wrapper, snapshot } = setup({
       useMount: true,
       tasks,
       onRemove
     })
+    expect(snapshot).toMatchSnapshot()
 
     const removeBtn = wrapper
       .find('Task')

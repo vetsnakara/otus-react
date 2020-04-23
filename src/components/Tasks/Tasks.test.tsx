@@ -1,5 +1,6 @@
 import React from 'react'
 import { mount, ReactWrapper } from 'enzyme'
+import renderer from 'react-test-renderer'
 
 import { Tasks } from './Tasks'
 import { TaskList } from '../TaskList'
@@ -16,13 +17,20 @@ describe('Tasks', () => {
       titles: ['One', 'Two', 'Three']
     })
 
-    const wrapper = mount(<Tasks tasks={tasks} ListComponent={TaskList} />)
+    const element = <Tasks tasks={tasks} ListComponent={TaskList} />
+    const wrapper = mount(element)
+    const snapshot = renderer.create(element).toJSON()
 
+    expect(snapshot).toMatchSnapshot()
     expect(wrapper.instance().state).toEqual({ tasks })
   })
 
   test('NoTasksBox is rendered when no tasks passed', () => {
-    const wrapper = mount(<Tasks tasks={[]} ListComponent={TaskList} />)
+    const element = <Tasks tasks={[]} ListComponent={TaskList} />
+    const wrapper = mount(element)
+    const snapshot = renderer.create(element).toJSON()
+
+    expect(snapshot).toMatchSnapshot()
     expect(wrapper.find('TaskList').length).toBe(0)
     expect(wrapper.find('NoTasksBox').length).toBe(1)
   })
@@ -34,7 +42,11 @@ describe('Tasks', () => {
 
     const spy = jest.spyOn(Tasks.prototype, 'handleToggleComplete')
 
-    const wrapper = mount(<Tasks tasks={tasks} ListComponent={TaskList} />)
+    const element = <Tasks tasks={tasks} ListComponent={TaskList} />
+    const wrapper = mount(element)
+    const snapshot = renderer.create(element).toJSON()
+
+    expect(snapshot).toMatchSnapshot()
 
     const taskIndex = 1
 
@@ -63,7 +75,11 @@ describe('Tasks', () => {
 
     const spy = jest.spyOn(Tasks.prototype, 'handleRemove')
 
-    const wrapper = mount(<Tasks tasks={tasks} ListComponent={TaskList} />)
+    const element = <Tasks tasks={tasks} ListComponent={TaskList} />
+    const wrapper = mount(element)
+    const snapshot = renderer.create(element).toJSON()
+
+    expect(snapshot).toMatchSnapshot()
 
     const taskIndex = 1
 

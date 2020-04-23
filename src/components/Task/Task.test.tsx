@@ -1,5 +1,6 @@
 import React from 'react'
 import { mount } from 'enzyme'
+import renderer from 'react-test-renderer'
 
 import type { TaskProps, TaskData, TaskActions } from 'types'
 import { Task } from './Task'
@@ -24,13 +25,19 @@ const setup = ({
     onRemove
   }
 
-  return mount(<Task {...setupProps} />)
+  return {
+    snapshot: renderer.create(<Task {...setupProps} />).toJSON(),
+    wrapper: mount(<Task {...setupProps} />)
+  }
 }
 
 describe(`Task`, () => {
   test(`Renders correctly`, () => {
     const title = 'Hello'
-    const wrapper = setup({ title })
+    const { wrapper, snapshot } = setup({ title })
+
+    // snapshot
+    expect(snapshot).toMatchSnapshot()
 
     // task is rendered
     const task = wrapper.find('TaskContainer')
@@ -51,7 +58,7 @@ describe(`Task`, () => {
 
   test(`Click 'complete' button`, () => {
     const onToggleComplete = jest.fn()
-    const wrapper = setup({ onToggleComplete })
+    const { wrapper } = setup({ onToggleComplete })
     const completeBtn = wrapper.find('ToggleButton').childAt(0)
 
     completeBtn.simulate('click')
@@ -60,7 +67,7 @@ describe(`Task`, () => {
 
   test(`Click 'remove' button`, () => {
     const onRemove = jest.fn()
-    const wrapper = setup({ onRemove })
+    const { wrapper } = setup({ onRemove })
     const removeBtn = wrapper.find('RemoveButton').childAt(0)
 
     removeBtn.simulate('click')
