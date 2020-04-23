@@ -5,7 +5,6 @@ import { Tasks } from './Tasks'
 import { TaskList } from '../TaskList'
 
 import { getTasks } from 'data'
-import { findByDataAttr } from 'test/helpers'
 
 const getTasksState = (wrapper: ReactWrapper) => {
   return wrapper.state('tasks') as Array<{ completed: boolean }>
@@ -22,6 +21,12 @@ describe('Tasks', () => {
     expect(wrapper.instance().state).toEqual({ tasks })
   })
 
+  test('NoTasksBox is rendered when no tasks passed', () => {
+    const wrapper = mount(<Tasks tasks={[]} ListComponent={TaskList} />)
+    expect(wrapper.find('TaskList').length).toBe(0)
+    expect(wrapper.find('NoTasksBox').length).toBe(1)
+  })
+
   test('Toggle task correct', () => {
     const tasks = getTasks({
       titles: ['One', 'Two', 'Three']
@@ -36,8 +41,11 @@ describe('Tasks', () => {
     let tasksState = getTasksState(wrapper)
     expect(tasksState[taskIndex].completed).toBe(false)
 
-    const task = findByDataAttr(wrapper, 'task').at(taskIndex)
-    const toggleButton = findByDataAttr(task, 'task-toggle-btn')
+    const toggleButton = wrapper
+      .find('Task')
+      .at(taskIndex)
+      .find('ToggleButton')
+      .childAt(0)
 
     // click to complete task
     toggleButton.simulate('click')
@@ -59,14 +67,17 @@ describe('Tasks', () => {
 
     const taskIndex = 1
 
-    const task = findByDataAttr(wrapper, 'task').at(taskIndex)
-    const toggleButton = findByDataAttr(task, 'task-remove-btn')
+    const removeButton = wrapper
+      .find('Task')
+      .at(taskIndex)
+      .find('RemoveButton')
+      .childAt(0)
 
     let stateTasks: Array<{ id: string }> = wrapper.state('tasks')
     expect(stateTasks.length).toBe(tasks.length)
 
     // click to remove
-    toggleButton.simulate('click')
+    removeButton.simulate('click')
     expect(spy).toHaveBeenCalledTimes(1)
     expect(spy).toHaveBeenCalledWith(tasks[taskIndex].id)
 

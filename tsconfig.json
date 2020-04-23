@@ -4,6 +4,7 @@
     "paths": {
       "types": ["./types"],
       "data": ["../data"],
+      "data/index.ts": ["../data/index.ts"],
       "test/*": ["../test/*"]
     },
     "target": "es5",

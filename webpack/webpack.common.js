@@ -21,13 +21,17 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.(woff(2)?|ttf|eot|svg)$/,
         use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader',
-        ],
-      },
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts',
+            }
+          }
+        ]
+      }
     ]
   },
 
@@ -49,6 +53,7 @@ module.exports = {
       types: path.resolve(__dirname, "../src/types"),
       data: path.resolve(__dirname, "../data"),
       test: path.resolve(__dirname, "../test"),
+      assets: path.resolve(__dirname, '../src/assets')
     }
   }
 }

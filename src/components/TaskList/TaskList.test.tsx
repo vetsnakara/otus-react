@@ -3,10 +3,8 @@ import { shallow, mount } from 'enzyme'
 
 import type { TaskListProps } from 'types'
 
-import { Task } from '../Task'
 import { TaskList } from './TaskList'
 
-import { findByDataAttr } from 'test/helpers'
 import { getTasks } from 'data'
 
 interface SetupProps extends Partial<TaskListProps> {
@@ -36,7 +34,7 @@ const setup = ({
 describe('TaskList', () => {
   test('Nothing is rendered if no tasks passed', () => {
     const wrapper = setup()
-    const taskList = findByDataAttr(wrapper, 'task-list')
+    const taskList = wrapper.find('TaskListContainer')
     expect(taskList.length).toBe(0)
   })
 
@@ -48,23 +46,9 @@ describe('TaskList', () => {
 
     const wrapper = setup({ tasks, onToggleComplete, onRemove, useMount: true })
 
-    // root element is rendered
-    const list = findByDataAttr(wrapper, 'task-list')
-    expect(list.length).toBe(1)
-
     // item elements are rendered
-    const items = findByDataAttr(wrapper, 'task-list-item')
+    const items = wrapper.find('TaskListItem')
     expect(items.length).toBe(tasks.length)
-
-    // each task gets correct props
-    items.forEach((item, i) => {
-      const task = item.find(Task)
-      expect(task.props()).toHaveProperty('task', tasks[i])
-
-      // ! don't work...
-      // expect(task.prop('onToggleComplete')).toBe(onToggleComplete)
-      // expect(task.prop('onRemove')).toBe(onRemove)
-    })
   })
 
   test('Toggle callback is called properly', () => {
@@ -79,15 +63,19 @@ describe('TaskList', () => {
       onToggleComplete
     })
 
-    const firstTask = findByDataAttr(wrapper, 'task').first()
-    const toggleBtn = findByDataAttr(firstTask, 'task-toggle-btn')
+    const toggleBtn = wrapper
+      .find('Task')
+      .first()
+      .find('ToggleButton')
+      .childAt(0)
 
     toggleBtn.simulate('click')
+
     expect(onToggleComplete).toHaveBeenCalledTimes(1)
     expect(onToggleComplete).toHaveBeenCalledWith(firstTaskId)
   })
 
-  test('Toggle callback is called properly', () => {
+  test('Remove callback is called properly', () => {
     const tasks = getTasks({ titles: ['One'] })
     const { id: firstTaskId } = tasks[0]
 
@@ -99,10 +87,14 @@ describe('TaskList', () => {
       onRemove
     })
 
-    const firstTask = findByDataAttr(wrapper, 'task').first()
-    const removeBtn = findByDataAttr(firstTask, 'task-remove-btn')
+    const removeBtn = wrapper
+      .find('Task')
+      .first()
+      .find('RemoveButton')
+      .childAt(0)
 
     removeBtn.simulate('click')
+
     expect(onRemove).toHaveBeenCalledTimes(1)
     expect(onRemove).toHaveBeenCalledWith(firstTaskId)
   })

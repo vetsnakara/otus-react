@@ -32,6 +32,7 @@ module.exports = {
       ],
       enforce: 'pre'
     })
+
     config.module.rules.push({
       test: /\.tsx?$/,
       include: path.resolve(__dirname, '../src'),
@@ -57,7 +58,7 @@ module.exports = {
       enforce: 'pre'
     })
 
-    return {
+    const newConfig = {
       ...config,
       resolve: custom.resolve,
       module: {
@@ -65,5 +66,7 @@ module.exports = {
         rules: [...config.module.rules, ...custom.module.rules]
       }
     }
+
+    return newConfig
   }
 }

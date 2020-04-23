@@ -1,10 +1,8 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { mount } from 'enzyme'
 
 import type { TaskProps, TaskData, TaskActions } from 'types'
 import { Task } from './Task'
-
-import { findByDataAttr } from 'test/helpers'
 
 interface SetupProps extends Partial<TaskData>, Partial<TaskActions> {}
 
@@ -26,7 +24,7 @@ const setup = ({
     onRemove
   }
 
-  return shallow(<Task {...setupProps} />)
+  return mount(<Task {...setupProps} />)
 }
 
 describe(`Task`, () => {
@@ -35,27 +33,27 @@ describe(`Task`, () => {
     const wrapper = setup({ title })
 
     // task is rendered
-    const task = findByDataAttr(wrapper, 'task')
+    const task = wrapper.find('TaskContainer')
     expect(task.length).toBe(1)
 
     // toggle btn is rendered
-    const completeBtn = findByDataAttr(task, 'task-toggle-btn')
+    const completeBtn = task.find('ToggleButton')
     expect(completeBtn.length).toBe(1)
 
     // remove btn is rendered
-    const removeBtn = findByDataAttr(task, 'task-remove-btn')
+    const removeBtn = task.find('RemoveButton')
     expect(removeBtn.length).toBe(1)
 
     // title value is expected
-    const taskTitle = findByDataAttr(task, 'task-title')
+    const taskTitle = task.find('Title')
     expect(taskTitle.text()).toContain(title)
   })
 
   test(`Click 'complete' button`, () => {
     const onToggleComplete = jest.fn()
     const wrapper = setup({ onToggleComplete })
+    const completeBtn = wrapper.find('ToggleButton').childAt(0)
 
-    const completeBtn = findByDataAttr(wrapper, 'task-toggle-btn')
     completeBtn.simulate('click')
     expect(onToggleComplete).toHaveBeenCalledTimes(1)
   })
@@ -63,8 +61,8 @@ describe(`Task`, () => {
   test(`Click 'remove' button`, () => {
     const onRemove = jest.fn()
     const wrapper = setup({ onRemove })
+    const removeBtn = wrapper.find('RemoveButton').childAt(0)
 
-    const removeBtn = findByDataAttr(wrapper, 'task-remove-btn')
     removeBtn.simulate('click')
     expect(onRemove).toHaveBeenCalledTimes(1)
   })

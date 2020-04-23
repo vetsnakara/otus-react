@@ -1,10 +1,13 @@
 import React from 'react'
-import 'loki/configure-react';
+import 'loki/configure-react'
 import { addDecorator } from '@storybook/react'
-import { withPropsTable } from 'storybook-addon-react-docgen';
+import { withPropsTable } from 'storybook-addon-react-docgen'
 
-addDecorator(withPropsTable);
-addDecorator(story => <div className="container">{story()}</div>)
+import { GlobalStyles } from '../src/styles'
 
-import './styles.scss'
-
+addDecorator(withPropsTable)
+addDecorator((story) => (
+  <GlobalStyles>
+    <div className="container">{story()}</div>
+  </GlobalStyles>
+))
