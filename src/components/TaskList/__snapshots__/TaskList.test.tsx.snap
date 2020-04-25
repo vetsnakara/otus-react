@@ -1,9 +1,634 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TaskList All tasks are rendered correctly 1`] = `[Function]`;
+exports[`TaskList All tasks are rendered correctly 1`] = `
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 5px 15px;
+  background-color: #fff;
+}
 
-exports[`TaskList Nothing is rendered if no tasks passed 1`] = `[Function]`;
+.c4 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.05);
+  cursor: pointer;
+  outline: none;
+  margin-right: 10px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
 
-exports[`TaskList Remove callback is called properly 1`] = `[Function]`;
+.c4 > svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
 
-exports[`TaskList Toggle callback is called properly 1`] = `[Function]`;
+.c4 path {
+  fill: rgba(0,0,0,0.5);
+}
+
+.c4 svg {
+  opacity: 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.c4:hover > svg {
+  opacity: 1;
+}
+
+.c7 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.05);
+  cursor: pointer;
+  outline: none;
+  visibility: hidden;
+  margin-left: auto;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+}
+
+.c7 > svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.c7 path {
+  fill: rgba(0,0,0,0.5);
+}
+
+.c2:hover .c7 {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.c6 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right: 10px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.c5 {
+  width: 15px;
+  height: 15px;
+}
+
+.c0 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c1:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+<ul
+  className="c0"
+>
+  <li
+    className="c1"
+  >
+    <div
+      className="c2 c3"
+    >
+      <button
+        className="styles__Button-sc-11nhwp9-1 c4"
+        onClick={[Function]}
+      >
+        <svg
+          className="c5"
+          height="100%"
+          style={Object {}}
+          viewBox="0 0 512 512"
+          width="100%"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+        >
+          <path
+            d="M504.502,75.496c-9.997-9.998-26.205-9.998-36.204,0L161.594,382.203L43.702,264.311c-9.997-9.998-26.205-9.997-36.204,0 c-9.998,9.997-9.998,26.205,0,36.203l135.994,135.992c9.994,9.997,26.214,9.99,36.204,0L504.502,111.7 C514.5,101.703,514.499,85.494,504.502,75.496z"
+            fill="#000"
+          />
+        </svg>
+      </button>
+      <p
+        className="c6"
+      >
+        One
+      </p>
+      <button
+        className="styles__Button-sc-11nhwp9-1 c7"
+        onClick={[Function]}
+      >
+        <svg
+          className="c5"
+          height="100%"
+          style={Object {}}
+          viewBox="0 0 512.001 512.001"
+          width="100%"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+        >
+          <path
+            d="M294.111,256.001L504.109,46.003c10.523-10.524,10.523-27.586,0-38.109c-10.524-10.524-27.587-10.524-38.11,0L256,217.892 L46.002,7.894c-10.524-10.524-27.586-10.524-38.109,0s-10.524,27.586,0,38.109l209.998,209.998L7.893,465.999 c-10.524,10.524-10.524,27.586,0,38.109c10.524,10.524,27.586,10.523,38.109,0L256,294.11l209.997,209.998 c10.524,10.524,27.587,10.523,38.11,0c10.523-10.524,10.523-27.586,0-38.109L294.111,256.001z"
+          />
+        </svg>
+      </button>
+    </div>
+  </li>
+  <li
+    className="c1"
+  >
+    <div
+      className="c2 c3"
+    >
+      <button
+        className="styles__Button-sc-11nhwp9-1 c4"
+        onClick={[Function]}
+      >
+        <svg
+          className="c5"
+          height="100%"
+          style={Object {}}
+          viewBox="0 0 512 512"
+          width="100%"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+        >
+          <path
+            d="M504.502,75.496c-9.997-9.998-26.205-9.998-36.204,0L161.594,382.203L43.702,264.311c-9.997-9.998-26.205-9.997-36.204,0 c-9.998,9.997-9.998,26.205,0,36.203l135.994,135.992c9.994,9.997,26.214,9.99,36.204,0L504.502,111.7 C514.5,101.703,514.499,85.494,504.502,75.496z"
+            fill="#000"
+          />
+        </svg>
+      </button>
+      <p
+        className="c6"
+      >
+        Two
+      </p>
+      <button
+        className="styles__Button-sc-11nhwp9-1 c7"
+        onClick={[Function]}
+      >
+        <svg
+          className="c5"
+          height="100%"
+          style={Object {}}
+          viewBox="0 0 512.001 512.001"
+          width="100%"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+        >
+          <path
+            d="M294.111,256.001L504.109,46.003c10.523-10.524,10.523-27.586,0-38.109c-10.524-10.524-27.587-10.524-38.11,0L256,217.892 L46.002,7.894c-10.524-10.524-27.586-10.524-38.109,0s-10.524,27.586,0,38.109l209.998,209.998L7.893,465.999 c-10.524,10.524-10.524,27.586,0,38.109c10.524,10.524,27.586,10.523,38.109,0L256,294.11l209.997,209.998 c10.524,10.524,27.587,10.523,38.11,0c10.523-10.524,10.523-27.586,0-38.109L294.111,256.001z"
+          />
+        </svg>
+      </button>
+    </div>
+  </li>
+  <li
+    className="c1"
+  >
+    <div
+      className="c2 c3"
+    >
+      <button
+        className="styles__Button-sc-11nhwp9-1 c4"
+        onClick={[Function]}
+      >
+        <svg
+          className="c5"
+          height="100%"
+          style={Object {}}
+          viewBox="0 0 512 512"
+          width="100%"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+        >
+          <path
+            d="M504.502,75.496c-9.997-9.998-26.205-9.998-36.204,0L161.594,382.203L43.702,264.311c-9.997-9.998-26.205-9.997-36.204,0 c-9.998,9.997-9.998,26.205,0,36.203l135.994,135.992c9.994,9.997,26.214,9.99,36.204,0L504.502,111.7 C514.5,101.703,514.499,85.494,504.502,75.496z"
+            fill="#000"
+          />
+        </svg>
+      </button>
+      <p
+        className="c6"
+      >
+        Three
+      </p>
+      <button
+        className="styles__Button-sc-11nhwp9-1 c7"
+        onClick={[Function]}
+      >
+        <svg
+          className="c5"
+          height="100%"
+          style={Object {}}
+          viewBox="0 0 512.001 512.001"
+          width="100%"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+        >
+          <path
+            d="M294.111,256.001L504.109,46.003c10.523-10.524,10.523-27.586,0-38.109c-10.524-10.524-27.587-10.524-38.11,0L256,217.892 L46.002,7.894c-10.524-10.524-27.586-10.524-38.109,0s-10.524,27.586,0,38.109l209.998,209.998L7.893,465.999 c-10.524,10.524-10.524,27.586,0,38.109c10.524,10.524,27.586,10.523,38.109,0L256,294.11l209.997,209.998 c10.524,10.524,27.587,10.523,38.11,0c10.523-10.524,10.523-27.586,0-38.109L294.111,256.001z"
+          />
+        </svg>
+      </button>
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`TaskList Nothing is rendered if no tasks passed 1`] = `null`;
+
+exports[`TaskList Remove callback is called properly 1`] = `
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 5px 15px;
+  background-color: #fff;
+}
+
+.c4 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.05);
+  cursor: pointer;
+  outline: none;
+  margin-right: 10px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.c4 > svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.c4 path {
+  fill: rgba(0,0,0,0.5);
+}
+
+.c4 svg {
+  opacity: 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.c4:hover > svg {
+  opacity: 1;
+}
+
+.c7 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.05);
+  cursor: pointer;
+  outline: none;
+  visibility: hidden;
+  margin-left: auto;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+}
+
+.c7 > svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.c7 path {
+  fill: rgba(0,0,0,0.5);
+}
+
+.c2:hover .c7 {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.c6 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right: 10px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.c5 {
+  width: 15px;
+  height: 15px;
+}
+
+.c0 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c1:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+<ul
+  className="c0"
+>
+  <li
+    className="c1"
+  >
+    <div
+      className="c2 c3"
+    >
+      <button
+        className="styles__Button-sc-11nhwp9-1 c4"
+        onClick={[Function]}
+      >
+        <svg
+          className="c5"
+          height="100%"
+          style={Object {}}
+          viewBox="0 0 512 512"
+          width="100%"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+        >
+          <path
+            d="M504.502,75.496c-9.997-9.998-26.205-9.998-36.204,0L161.594,382.203L43.702,264.311c-9.997-9.998-26.205-9.997-36.204,0 c-9.998,9.997-9.998,26.205,0,36.203l135.994,135.992c9.994,9.997,26.214,9.99,36.204,0L504.502,111.7 C514.5,101.703,514.499,85.494,504.502,75.496z"
+            fill="#000"
+          />
+        </svg>
+      </button>
+      <p
+        className="c6"
+      >
+        One
+      </p>
+      <button
+        className="styles__Button-sc-11nhwp9-1 c7"
+        onClick={[Function]}
+      >
+        <svg
+          className="c5"
+          height="100%"
+          style={Object {}}
+          viewBox="0 0 512.001 512.001"
+          width="100%"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+        >
+          <path
+            d="M294.111,256.001L504.109,46.003c10.523-10.524,10.523-27.586,0-38.109c-10.524-10.524-27.587-10.524-38.11,0L256,217.892 L46.002,7.894c-10.524-10.524-27.586-10.524-38.109,0s-10.524,27.586,0,38.109l209.998,209.998L7.893,465.999 c-10.524,10.524-10.524,27.586,0,38.109c10.524,10.524,27.586,10.523,38.109,0L256,294.11l209.997,209.998 c10.524,10.524,27.587,10.523,38.11,0c10.523-10.524,10.523-27.586,0-38.109L294.111,256.001z"
+          />
+        </svg>
+      </button>
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`TaskList Toggle callback is called properly 1`] = `
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 5px 15px;
+  background-color: #fff;
+}
+
+.c4 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.05);
+  cursor: pointer;
+  outline: none;
+  margin-right: 10px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.c4 > svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.c4 path {
+  fill: rgba(0,0,0,0.5);
+}
+
+.c4 svg {
+  opacity: 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.c4:hover > svg {
+  opacity: 1;
+}
+
+.c7 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.05);
+  cursor: pointer;
+  outline: none;
+  visibility: hidden;
+  margin-left: auto;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+}
+
+.c7 > svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.c7 path {
+  fill: rgba(0,0,0,0.5);
+}
+
+.c2:hover .c7 {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.c6 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right: 10px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.c5 {
+  width: 15px;
+  height: 15px;
+}
+
+.c0 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c1:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+<ul
+  className="c0"
+>
+  <li
+    className="c1"
+  >
+    <div
+      className="c2 c3"
+    >
+      <button
+        className="styles__Button-sc-11nhwp9-1 c4"
+        onClick={[Function]}
+      >
+        <svg
+          className="c5"
+          height="100%"
+          style={Object {}}
+          viewBox="0 0 512 512"
+          width="100%"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+        >
+          <path
+            d="M504.502,75.496c-9.997-9.998-26.205-9.998-36.204,0L161.594,382.203L43.702,264.311c-9.997-9.998-26.205-9.997-36.204,0 c-9.998,9.997-9.998,26.205,0,36.203l135.994,135.992c9.994,9.997,26.214,9.99,36.204,0L504.502,111.7 C514.5,101.703,514.499,85.494,504.502,75.496z"
+            fill="#000"
+          />
+        </svg>
+      </button>
+      <p
+        className="c6"
+      >
+        One
+      </p>
+      <button
+        className="styles__Button-sc-11nhwp9-1 c7"
+        onClick={[Function]}
+      >
+        <svg
+          className="c5"
+          height="100%"
+          style={Object {}}
+          viewBox="0 0 512.001 512.001"
+          width="100%"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+        >
+          <path
+            d="M294.111,256.001L504.109,46.003c10.523-10.524,10.523-27.586,0-38.109c-10.524-10.524-27.587-10.524-38.11,0L256,217.892 L46.002,7.894c-10.524-10.524-27.586-10.524-38.109,0s-10.524,27.586,0,38.109l209.998,209.998L7.893,465.999 c-10.524,10.524-10.524,27.586,0,38.109c10.524,10.524,27.586,10.523,38.109,0L256,294.11l209.997,209.998 c10.524,10.524,27.587,10.523,38.11,0c10.523-10.524,10.523-27.586,0-38.109L294.111,256.001z"
+          />
+        </svg>
+      </button>
+    </div>
+  </li>
+</ul>
+`;

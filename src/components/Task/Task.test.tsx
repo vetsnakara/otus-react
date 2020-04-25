@@ -25,9 +25,11 @@ const setup = ({
     onRemove
   }
 
+  const element = <Task {...setupProps} />
+
   return {
-    snapshot: renderer.create(<Task {...setupProps} />).toJSON(),
-    wrapper: mount(<Task {...setupProps} />)
+    snapshot: renderer.create(element).toJSON(),
+    wrapper: mount(element)
   }
 }
 

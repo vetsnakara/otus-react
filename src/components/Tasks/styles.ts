@@ -1,5 +1,5 @@
-import styled from '@emotion/styled'
-import { SVGIcon } from '../../components/SVGIcon'
+import styled from 'styled-components'
+import { SVGIcon } from '../SVGIcon'
 
 /**
  * NoTasksBox

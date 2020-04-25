@@ -1,26 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Tasks NoTasksBox is rendered when no tasks passed 1`] = `
-.emotion-2 {
+.c0 {
   background-color: #fff;
   text-align: center;
   padding: 100px;
 }
 
-.emotion-0 {
+.c1 {
   width: 40px;
   height: 40px;
 }
 
-.emotion-0 > path {
+.c1 > path {
   fill: #26c6da;
 }
 
 <section
-  className="emotion-2 emotion-3"
+  className="c0"
 >
   <svg
-    className="emotion-0 emotion-1"
+    className="c1"
     height="100%"
     style={Object {}}
     viewBox="0 0 512 512"
@@ -43,17 +43,7 @@ exports[`Tasks NoTasksBox is rendered when no tasks passed 1`] = `
 `;
 
 exports[`Tasks Remove task correct 1`] = `
-.emotion-42 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.emotion-12:not(:last-child) {
-  margin-bottom: 5px;
-}
-
-.emotion-10 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -66,7 +56,7 @@ exports[`Tasks Remove task correct 1`] = `
   background-color: #fff;
 }
 
-.emotion-2 {
+.c4 {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -83,7 +73,7 @@ exports[`Tasks Remove task correct 1`] = `
   transition: all 0.2s ease;
 }
 
-.emotion-2 > svg {
+.c4 > svg {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -92,35 +82,21 @@ exports[`Tasks Remove task correct 1`] = `
   transform: translate(-50%,-50%);
 }
 
-.emotion-2 path {
+.c4 path {
   fill: rgba(0,0,0,0.5);
 }
 
-.emotion-2 svg {
+.c4 svg {
   opacity: 0;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
-.emotion-2:hover > svg {
+.c4:hover > svg {
   opacity: 1;
 }
 
-.emotion-0 {
-  width: 15px;
-  height: 15px;
-}
-
-.emotion-4 {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  margin-right: 10px;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-
-.emotion-8 {
+.c7 {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -142,7 +118,7 @@ exports[`Tasks Remove task correct 1`] = `
   opacity: 0;
 }
 
-.emotion-8 > svg {
+.c7 > svg {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -151,11 +127,11 @@ exports[`Tasks Remove task correct 1`] = `
   transform: translate(-50%,-50%);
 }
 
-.emotion-8 path {
+.c7 path {
   fill: rgba(0,0,0,0.5);
 }
 
-.emotion-11:hover .emotion-8 {
+.c2:hover .c7 {
   visibility: visible;
   opacity: 1;
   -webkit-transform: scale(1);
@@ -163,21 +139,45 @@ exports[`Tasks Remove task correct 1`] = `
   transform: scale(1);
 }
 
+.c6 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right: 10px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.c5 {
+  width: 15px;
+  height: 15px;
+}
+
+.c0 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c1:not(:last-child) {
+  margin-bottom: 5px;
+}
+
 <ul
-  className="emotion-42 emotion-43"
+  className="c0"
 >
   <li
-    className="emotion-12 emotion-13"
+    className="c1"
   >
     <div
-      className="emotion-10 emotion-11"
+      className="c2 c3"
     >
       <button
-        className="emotion-2 emotion-3"
+        className="styles__Button-sc-11nhwp9-1 c4"
         onClick={[Function]}
       >
         <svg
-          className="emotion-0 emotion-1"
+          className="c5"
           height="100%"
           style={Object {}}
           viewBox="0 0 512 512"
@@ -192,16 +192,16 @@ exports[`Tasks Remove task correct 1`] = `
         </svg>
       </button>
       <p
-        className="emotion-4 emotion-5"
+        className="c6"
       >
         One
       </p>
       <button
-        className="emotion-8 emotion-9"
+        className="styles__Button-sc-11nhwp9-1 c7"
         onClick={[Function]}
       >
         <svg
-          className="emotion-0 emotion-1"
+          className="c5"
           height="100%"
           style={Object {}}
           viewBox="0 0 512.001 512.001"
@@ -217,17 +217,17 @@ exports[`Tasks Remove task correct 1`] = `
     </div>
   </li>
   <li
-    className="emotion-12 emotion-13"
+    className="c1"
   >
     <div
-      className="emotion-10 emotion-11"
+      className="c2 c3"
     >
       <button
-        className="emotion-2 emotion-3"
+        className="styles__Button-sc-11nhwp9-1 c4"
         onClick={[Function]}
       >
         <svg
-          className="emotion-0 emotion-1"
+          className="c5"
           height="100%"
           style={Object {}}
           viewBox="0 0 512 512"
@@ -242,16 +242,16 @@ exports[`Tasks Remove task correct 1`] = `
         </svg>
       </button>
       <p
-        className="emotion-4 emotion-5"
+        className="c6"
       >
         Two
       </p>
       <button
-        className="emotion-8 emotion-9"
+        className="styles__Button-sc-11nhwp9-1 c7"
         onClick={[Function]}
       >
         <svg
-          className="emotion-0 emotion-1"
+          className="c5"
           height="100%"
           style={Object {}}
           viewBox="0 0 512.001 512.001"
@@ -267,17 +267,17 @@ exports[`Tasks Remove task correct 1`] = `
     </div>
   </li>
   <li
-    className="emotion-12 emotion-13"
+    className="c1"
   >
     <div
-      className="emotion-10 emotion-11"
+      className="c2 c3"
     >
       <button
-        className="emotion-2 emotion-3"
+        className="styles__Button-sc-11nhwp9-1 c4"
         onClick={[Function]}
       >
         <svg
-          className="emotion-0 emotion-1"
+          className="c5"
           height="100%"
           style={Object {}}
           viewBox="0 0 512 512"
@@ -292,16 +292,16 @@ exports[`Tasks Remove task correct 1`] = `
         </svg>
       </button>
       <p
-        className="emotion-4 emotion-5"
+        className="c6"
       >
         Three
       </p>
       <button
-        className="emotion-8 emotion-9"
+        className="styles__Button-sc-11nhwp9-1 c7"
         onClick={[Function]}
       >
         <svg
-          className="emotion-0 emotion-1"
+          className="c5"
           height="100%"
           style={Object {}}
           viewBox="0 0 512.001 512.001"
@@ -320,17 +320,7 @@ exports[`Tasks Remove task correct 1`] = `
 `;
 
 exports[`Tasks State is correct 1`] = `
-.emotion-42 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.emotion-12:not(:last-child) {
-  margin-bottom: 5px;
-}
-
-.emotion-10 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -343,7 +333,7 @@ exports[`Tasks State is correct 1`] = `
   background-color: #fff;
 }
 
-.emotion-2 {
+.c4 {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -360,7 +350,7 @@ exports[`Tasks State is correct 1`] = `
   transition: all 0.2s ease;
 }
 
-.emotion-2 > svg {
+.c4 > svg {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -369,35 +359,21 @@ exports[`Tasks State is correct 1`] = `
   transform: translate(-50%,-50%);
 }
 
-.emotion-2 path {
+.c4 path {
   fill: rgba(0,0,0,0.5);
 }
 
-.emotion-2 svg {
+.c4 svg {
   opacity: 0;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
-.emotion-2:hover > svg {
+.c4:hover > svg {
   opacity: 1;
 }
 
-.emotion-0 {
-  width: 15px;
-  height: 15px;
-}
-
-.emotion-4 {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  margin-right: 10px;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-
-.emotion-8 {
+.c7 {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -419,7 +395,7 @@ exports[`Tasks State is correct 1`] = `
   opacity: 0;
 }
 
-.emotion-8 > svg {
+.c7 > svg {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -428,11 +404,11 @@ exports[`Tasks State is correct 1`] = `
   transform: translate(-50%,-50%);
 }
 
-.emotion-8 path {
+.c7 path {
   fill: rgba(0,0,0,0.5);
 }
 
-.emotion-11:hover .emotion-8 {
+.c2:hover .c7 {
   visibility: visible;
   opacity: 1;
   -webkit-transform: scale(1);
@@ -440,21 +416,45 @@ exports[`Tasks State is correct 1`] = `
   transform: scale(1);
 }
 
+.c6 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right: 10px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.c5 {
+  width: 15px;
+  height: 15px;
+}
+
+.c0 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c1:not(:last-child) {
+  margin-bottom: 5px;
+}
+
 <ul
-  className="emotion-42 emotion-43"
+  className="c0"
 >
   <li
-    className="emotion-12 emotion-13"
+    className="c1"
   >
     <div
-      className="emotion-10 emotion-11"
+      className="c2 c3"
     >
       <button
-        className="emotion-2 emotion-3"
+        className="styles__Button-sc-11nhwp9-1 c4"
         onClick={[Function]}
       >
         <svg
-          className="emotion-0 emotion-1"
+          className="c5"
           height="100%"
           style={Object {}}
           viewBox="0 0 512 512"
@@ -469,16 +469,16 @@ exports[`Tasks State is correct 1`] = `
         </svg>
       </button>
       <p
-        className="emotion-4 emotion-5"
+        className="c6"
       >
         One
       </p>
       <button
-        className="emotion-8 emotion-9"
+        className="styles__Button-sc-11nhwp9-1 c7"
         onClick={[Function]}
       >
         <svg
-          className="emotion-0 emotion-1"
+          className="c5"
           height="100%"
           style={Object {}}
           viewBox="0 0 512.001 512.001"
@@ -494,17 +494,17 @@ exports[`Tasks State is correct 1`] = `
     </div>
   </li>
   <li
-    className="emotion-12 emotion-13"
+    className="c1"
   >
     <div
-      className="emotion-10 emotion-11"
+      className="c2 c3"
     >
       <button
-        className="emotion-2 emotion-3"
+        className="styles__Button-sc-11nhwp9-1 c4"
         onClick={[Function]}
       >
         <svg
-          className="emotion-0 emotion-1"
+          className="c5"
           height="100%"
           style={Object {}}
           viewBox="0 0 512 512"
@@ -519,16 +519,16 @@ exports[`Tasks State is correct 1`] = `
         </svg>
       </button>
       <p
-        className="emotion-4 emotion-5"
+        className="c6"
       >
         Two
       </p>
       <button
-        className="emotion-8 emotion-9"
+        className="styles__Button-sc-11nhwp9-1 c7"
         onClick={[Function]}
       >
         <svg
-          className="emotion-0 emotion-1"
+          className="c5"
           height="100%"
           style={Object {}}
           viewBox="0 0 512.001 512.001"
@@ -544,17 +544,17 @@ exports[`Tasks State is correct 1`] = `
     </div>
   </li>
   <li
-    className="emotion-12 emotion-13"
+    className="c1"
   >
     <div
-      className="emotion-10 emotion-11"
+      className="c2 c3"
     >
       <button
-        className="emotion-2 emotion-3"
+        className="styles__Button-sc-11nhwp9-1 c4"
         onClick={[Function]}
       >
         <svg
-          className="emotion-0 emotion-1"
+          className="c5"
           height="100%"
           style={Object {}}
           viewBox="0 0 512 512"
@@ -569,16 +569,16 @@ exports[`Tasks State is correct 1`] = `
         </svg>
       </button>
       <p
-        className="emotion-4 emotion-5"
+        className="c6"
       >
         Three
       </p>
       <button
-        className="emotion-8 emotion-9"
+        className="styles__Button-sc-11nhwp9-1 c7"
         onClick={[Function]}
       >
         <svg
-          className="emotion-0 emotion-1"
+          className="c5"
           height="100%"
           style={Object {}}
           viewBox="0 0 512.001 512.001"
@@ -597,17 +597,7 @@ exports[`Tasks State is correct 1`] = `
 `;
 
 exports[`Tasks Toggle task correct 1`] = `
-.emotion-42 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.emotion-12:not(:last-child) {
-  margin-bottom: 5px;
-}
-
-.emotion-10 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -620,7 +610,7 @@ exports[`Tasks Toggle task correct 1`] = `
   background-color: #fff;
 }
 
-.emotion-2 {
+.c4 {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -637,7 +627,7 @@ exports[`Tasks Toggle task correct 1`] = `
   transition: all 0.2s ease;
 }
 
-.emotion-2 > svg {
+.c4 > svg {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -646,35 +636,21 @@ exports[`Tasks Toggle task correct 1`] = `
   transform: translate(-50%,-50%);
 }
 
-.emotion-2 path {
+.c4 path {
   fill: rgba(0,0,0,0.5);
 }
 
-.emotion-2 svg {
+.c4 svg {
   opacity: 0;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
-.emotion-2:hover > svg {
+.c4:hover > svg {
   opacity: 1;
 }
 
-.emotion-0 {
-  width: 15px;
-  height: 15px;
-}
-
-.emotion-4 {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  margin-right: 10px;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-
-.emotion-8 {
+.c7 {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -696,7 +672,7 @@ exports[`Tasks Toggle task correct 1`] = `
   opacity: 0;
 }
 
-.emotion-8 > svg {
+.c7 > svg {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -705,11 +681,11 @@ exports[`Tasks Toggle task correct 1`] = `
   transform: translate(-50%,-50%);
 }
 
-.emotion-8 path {
+.c7 path {
   fill: rgba(0,0,0,0.5);
 }
 
-.emotion-11:hover .emotion-8 {
+.c2:hover .c7 {
   visibility: visible;
   opacity: 1;
   -webkit-transform: scale(1);
@@ -717,21 +693,45 @@ exports[`Tasks Toggle task correct 1`] = `
   transform: scale(1);
 }
 
+.c6 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right: 10px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.c5 {
+  width: 15px;
+  height: 15px;
+}
+
+.c0 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c1:not(:last-child) {
+  margin-bottom: 5px;
+}
+
 <ul
-  className="emotion-42 emotion-43"
+  className="c0"
 >
   <li
-    className="emotion-12 emotion-13"
+    className="c1"
   >
     <div
-      className="emotion-10 emotion-11"
+      className="c2 c3"
     >
       <button
-        className="emotion-2 emotion-3"
+        className="styles__Button-sc-11nhwp9-1 c4"
         onClick={[Function]}
       >
         <svg
-          className="emotion-0 emotion-1"
+          className="c5"
           height="100%"
           style={Object {}}
           viewBox="0 0 512 512"
@@ -746,16 +746,16 @@ exports[`Tasks Toggle task correct 1`] = `
         </svg>
       </button>
       <p
-        className="emotion-4 emotion-5"
+        className="c6"
       >
         One
       </p>
       <button
-        className="emotion-8 emotion-9"
+        className="styles__Button-sc-11nhwp9-1 c7"
         onClick={[Function]}
       >
         <svg
-          className="emotion-0 emotion-1"
+          className="c5"
           height="100%"
           style={Object {}}
           viewBox="0 0 512.001 512.001"
@@ -771,17 +771,17 @@ exports[`Tasks Toggle task correct 1`] = `
     </div>
   </li>
   <li
-    className="emotion-12 emotion-13"
+    className="c1"
   >
     <div
-      className="emotion-10 emotion-11"
+      className="c2 c3"
     >
       <button
-        className="emotion-2 emotion-3"
+        className="styles__Button-sc-11nhwp9-1 c4"
         onClick={[Function]}
       >
         <svg
-          className="emotion-0 emotion-1"
+          className="c5"
           height="100%"
           style={Object {}}
           viewBox="0 0 512 512"
@@ -796,16 +796,16 @@ exports[`Tasks Toggle task correct 1`] = `
         </svg>
       </button>
       <p
-        className="emotion-4 emotion-5"
+        className="c6"
       >
         Two
       </p>
       <button
-        className="emotion-8 emotion-9"
+        className="styles__Button-sc-11nhwp9-1 c7"
         onClick={[Function]}
       >
         <svg
-          className="emotion-0 emotion-1"
+          className="c5"
           height="100%"
           style={Object {}}
           viewBox="0 0 512.001 512.001"
@@ -821,17 +821,17 @@ exports[`Tasks Toggle task correct 1`] = `
     </div>
   </li>
   <li
-    className="emotion-12 emotion-13"
+    className="c1"
   >
     <div
-      className="emotion-10 emotion-11"
+      className="c2 c3"
     >
       <button
-        className="emotion-2 emotion-3"
+        className="styles__Button-sc-11nhwp9-1 c4"
         onClick={[Function]}
       >
         <svg
-          className="emotion-0 emotion-1"
+          className="c5"
           height="100%"
           style={Object {}}
           viewBox="0 0 512 512"
@@ -846,16 +846,16 @@ exports[`Tasks Toggle task correct 1`] = `
         </svg>
       </button>
       <p
-        className="emotion-4 emotion-5"
+        className="c6"
       >
         Three
       </p>
       <button
-        className="emotion-8 emotion-9"
+        className="styles__Button-sc-11nhwp9-1 c7"
         onClick={[Function]}
       >
         <svg
-          className="emotion-0 emotion-1"
+          className="c5"
           height="100%"
           style={Object {}}
           viewBox="0 0 512.001 512.001"

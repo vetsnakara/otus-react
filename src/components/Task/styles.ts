@@ -1,7 +1,6 @@
-import styled from '@emotion/styled'
-import { css } from '@emotion/core'
+import styled from 'styled-components'
 
-import { SVGIcon } from '../../components/SVGIcon'
+import { SVGIcon } from '../SVGIcon'
 
 interface TaskProps {
   completed?: boolean
@@ -23,7 +22,7 @@ TaskContainer.displayName = 'TaskContainer'
 /**
  * Button
  */
-const Button = styled.button`
+const Button = styled.button<TaskProps>`
   flex-shrink: 0;
   position: relative;
   width: 30px;
@@ -48,34 +47,31 @@ const Button = styled.button`
 /**
  * ToggleButton
  */
-export const ToggleButton = styled(Button)<TaskProps>(
-  css`
-    margin-right: 10px;
+export const ToggleButton = styled(Button)`
+  margin-right: 10px;
+  transition: all 0.2s ease;
+
+  svg {
+    opacity: 0;
     transition: all 0.2s ease;
+  }
 
-    svg {
-      opacity: 0;
-      transition: all 0.2s ease;
-    }
+  &:hover > svg {
+    opacity: 1;
+  }
 
-    &:hover > svg {
-      opacity: 1;
-    }
-  `,
-  ({ completed }) =>
+  ${({ completed }) =>
     completed &&
-    css`
-      background-color: #4dd599;
+    `background-color: #4dd599;
 
-      & svg {
-        opacity: 1;
+    & svg {
+      opacity: 1;
 
-        path {
-          fill: #fff;
-        }
+      path {
+        fill: #fff;
       }
-    `
-)
+    }`}
+`
 
 ToggleButton.displayName = 'ToggleButton'
 
@@ -101,21 +97,20 @@ RemoveButton.displayName = 'RemoveButton'
 /**
  * Title
  */
-export const Title = styled('p')<TaskProps>(
-  css`
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    margin-right: 10px;
-    transition: all 0.2s ease;
-  `,
-  ({ completed }) =>
+export const Title = styled.p<TaskProps>`
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right: 10px;
+  transition: all 0.2s ease;
+
+  ${({ completed }) =>
     completed &&
-    css`
+    `
       text-decoration: line-through;
       color: rgba(0, 0, 0, 0.4);
-    `
-)
+    `}
+`
 
 Title.displayName = 'Title'
 

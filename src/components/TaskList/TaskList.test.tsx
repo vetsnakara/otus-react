@@ -27,11 +27,11 @@ const setup = ({
     onRemove
   }
 
+  const element = <TaskList {...setupProps} />
+
   return {
-    snapshot: renderer.create(<TaskList {...setupProps} />).toJSON,
-    wrapper: useMount
-      ? mount(<TaskList {...setupProps} />)
-      : shallow(<TaskList {...setupProps} />)
+    snapshot: renderer.create(element).toJSON(),
+    wrapper: useMount ? mount(element) : shallow(element)
   }
 }
 

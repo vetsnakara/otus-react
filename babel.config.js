@@ -4,13 +4,5 @@ module.exports = {
     "@babel/react",
     "@babel/typescript"
   ],
-  plugins: ["transform-class-properties", "emotion"],
-  env: {
-    production: {
-      plugins: ["emotion"],
-    },
-    development: {
-      plugins: [["emotion", { sourceMap: true }]],
-    },
-  }
+  plugins: ["transform-class-properties", "styled-components"],
 }
