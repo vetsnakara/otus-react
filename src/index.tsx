@@ -1,7 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import Task from './components/Task'
+
+import './index.scss'
+
 ReactDOM.render(
-  <h1>App should be here ...</h1>,
+  <Task
+    task={{ title: 'Hello world' }}
+    onToggleComplete={() => console.log('completed')}
+    onRemove={() => console.log('removed')}
+  />,
   document.querySelector('#root')
 )
