@@ -53,7 +53,8 @@ module.exports = {
       types: path.resolve(__dirname, "../src/types"),
       data: path.resolve(__dirname, "../data"),
       test: path.resolve(__dirname, "../test"),
-      assets: path.resolve(__dirname, '../src/assets')
+      assets: path.resolve(__dirname, '../src/assets'),
+      shared: path.resolve(__dirname, '../src/components/shared'),
     }
   }
 }

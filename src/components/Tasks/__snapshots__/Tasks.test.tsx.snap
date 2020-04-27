@@ -173,7 +173,7 @@ exports[`Tasks Remove task correct 1`] = `
       className="c2 c3"
     >
       <button
-        className="styles__Button-sc-11nhwp9-1 c4"
+        className="styles__Button-sehqud-1 c4"
         onClick={[Function]}
       >
         <svg
@@ -197,7 +197,7 @@ exports[`Tasks Remove task correct 1`] = `
         One
       </p>
       <button
-        className="styles__Button-sc-11nhwp9-1 c7"
+        className="styles__Button-sehqud-1 c7"
         onClick={[Function]}
       >
         <svg
@@ -223,7 +223,7 @@ exports[`Tasks Remove task correct 1`] = `
       className="c2 c3"
     >
       <button
-        className="styles__Button-sc-11nhwp9-1 c4"
+        className="styles__Button-sehqud-1 c4"
         onClick={[Function]}
       >
         <svg
@@ -247,7 +247,7 @@ exports[`Tasks Remove task correct 1`] = `
         Two
       </p>
       <button
-        className="styles__Button-sc-11nhwp9-1 c7"
+        className="styles__Button-sehqud-1 c7"
         onClick={[Function]}
       >
         <svg
@@ -273,7 +273,7 @@ exports[`Tasks Remove task correct 1`] = `
       className="c2 c3"
     >
       <button
-        className="styles__Button-sc-11nhwp9-1 c4"
+        className="styles__Button-sehqud-1 c4"
         onClick={[Function]}
       >
         <svg
@@ -297,7 +297,7 @@ exports[`Tasks Remove task correct 1`] = `
         Three
       </p>
       <button
-        className="styles__Button-sc-11nhwp9-1 c7"
+        className="styles__Button-sehqud-1 c7"
         onClick={[Function]}
       >
         <svg
@@ -450,7 +450,7 @@ exports[`Tasks State is correct 1`] = `
       className="c2 c3"
     >
       <button
-        className="styles__Button-sc-11nhwp9-1 c4"
+        className="styles__Button-sehqud-1 c4"
         onClick={[Function]}
       >
         <svg
@@ -474,7 +474,7 @@ exports[`Tasks State is correct 1`] = `
         One
       </p>
       <button
-        className="styles__Button-sc-11nhwp9-1 c7"
+        className="styles__Button-sehqud-1 c7"
         onClick={[Function]}
       >
         <svg
@@ -500,7 +500,7 @@ exports[`Tasks State is correct 1`] = `
       className="c2 c3"
     >
       <button
-        className="styles__Button-sc-11nhwp9-1 c4"
+        className="styles__Button-sehqud-1 c4"
         onClick={[Function]}
       >
         <svg
@@ -524,7 +524,7 @@ exports[`Tasks State is correct 1`] = `
         Two
       </p>
       <button
-        className="styles__Button-sc-11nhwp9-1 c7"
+        className="styles__Button-sehqud-1 c7"
         onClick={[Function]}
       >
         <svg
@@ -550,7 +550,7 @@ exports[`Tasks State is correct 1`] = `
       className="c2 c3"
     >
       <button
-        className="styles__Button-sc-11nhwp9-1 c4"
+        className="styles__Button-sehqud-1 c4"
         onClick={[Function]}
       >
         <svg
@@ -574,7 +574,7 @@ exports[`Tasks State is correct 1`] = `
         Three
       </p>
       <button
-        className="styles__Button-sc-11nhwp9-1 c7"
+        className="styles__Button-sehqud-1 c7"
         onClick={[Function]}
       >
         <svg
@@ -727,7 +727,7 @@ exports[`Tasks Toggle task correct 1`] = `
       className="c2 c3"
     >
       <button
-        className="styles__Button-sc-11nhwp9-1 c4"
+        className="styles__Button-sehqud-1 c4"
         onClick={[Function]}
       >
         <svg
@@ -751,7 +751,7 @@ exports[`Tasks Toggle task correct 1`] = `
         One
       </p>
       <button
-        className="styles__Button-sc-11nhwp9-1 c7"
+        className="styles__Button-sehqud-1 c7"
         onClick={[Function]}
       >
         <svg
@@ -777,7 +777,7 @@ exports[`Tasks Toggle task correct 1`] = `
       className="c2 c3"
     >
       <button
-        className="styles__Button-sc-11nhwp9-1 c4"
+        className="styles__Button-sehqud-1 c4"
         onClick={[Function]}
       >
         <svg
@@ -801,7 +801,7 @@ exports[`Tasks Toggle task correct 1`] = `
         Two
       </p>
       <button
-        className="styles__Button-sc-11nhwp9-1 c7"
+        className="styles__Button-sehqud-1 c7"
         onClick={[Function]}
       >
         <svg
@@ -827,7 +827,7 @@ exports[`Tasks Toggle task correct 1`] = `
       className="c2 c3"
     >
       <button
-        className="styles__Button-sc-11nhwp9-1 c4"
+        className="styles__Button-sehqud-1 c4"
         onClick={[Function]}
       >
         <svg
@@ -851,7 +851,7 @@ exports[`Tasks Toggle task correct 1`] = `
         Three
       </p>
       <button
-        className="styles__Button-sc-11nhwp9-1 c7"
+        className="styles__Button-sehqud-1 c7"
         onClick={[Function]}
       >
         <svg

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { SVGIcon } from '../SVGIcon'
+import { SVGIcon } from 'shared/SVGIcon'
 
 interface TaskProps {
   completed?: boolean

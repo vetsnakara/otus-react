@@ -5,7 +5,8 @@
       "types": ["./types"],
       "data": ["../data"],
       "data/index.ts": ["../data/index.ts"],
-      "test/*": ["../test/*"]
+      "test/*": ["../test/*"],
+      "shared/*": ["./components/shared/*"]
     },
     "target": "es5",
     "module": "commonjs",

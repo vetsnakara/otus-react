@@ -115,7 +115,7 @@ exports[`Task Renders correctly 1`] = `
   className="c0 c1"
 >
   <button
-    className="styles__Button-sc-11nhwp9-1 c2"
+    className="styles__Button-sehqud-1 c2"
     onClick={[MockFunction]}
   >
     <svg
@@ -139,7 +139,7 @@ exports[`Task Renders correctly 1`] = `
     Hello
   </p>
   <button
-    className="styles__Button-sc-11nhwp9-1 c5"
+    className="styles__Button-sehqud-1 c5"
     onClick={[MockFunction]}
   >
     <svg

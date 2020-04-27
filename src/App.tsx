@@ -3,7 +3,7 @@ import React from 'react'
 import { GlobalStyles } from './styles'
 
 import { Tasks } from './components/Tasks'
-import { TaskList } from './components/TaskList'
+import { TaskList } from './components/Tasks/components/TaskList'
 
 import { getTasks } from 'data'
 

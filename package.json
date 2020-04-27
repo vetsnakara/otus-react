@@ -13,7 +13,8 @@
     "loki:test": "npm run storybook:build && npx loki test --reactUri file:./storybook-static",
     "loki:update": "npm run storybook:build && npx loki update --reactUri file:./storybook-static",
     "loki:approve": "npx loki approve",
-    "check": "npm run lint && npm test && npm run loki:test",
+    "check:pre-commit": "npm run lint && npm test",
+    "check:pre-push": "npm run check:pre-commit && npm run loki:test",
     "commit": "npx git-cz",
     "serve": "serve ./build",
     "clean": "rm -rf ./build"
@@ -79,8 +80,8 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "npm run check",
-      "pre-push": "npm run check"
+      "pre-commit": "npm run check:pre-commit",
+      "pre-push": "npm run check:pre-push"
     }
   },
   "config": {

@@ -3,7 +3,7 @@ import { mount, ReactWrapper } from 'enzyme'
 import renderer from 'react-test-renderer'
 
 import { Tasks } from './Tasks'
-import { TaskList } from '../TaskList'
+import { TaskList } from './components/TaskList'
 
 import { getTasks } from 'data'
 

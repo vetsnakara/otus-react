@@ -14,5 +14,6 @@ module.exports = {
     "^types(.*)$": "<rootDir>/src/types$1",
     "^data(.*)$": "<rootDir>/data$1",
     "^test(.*)$": "<rootDir>/test$1",
+    "^shared(.*)$": "<rootDir>/src/components/shared$1",
   }
 };

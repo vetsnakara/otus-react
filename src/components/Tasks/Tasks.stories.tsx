@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 
 import { Tasks } from './Tasks'
-import { TaskList } from '../TaskList'
+import { TaskList } from './components/TaskList'
 
 import { getTasks } from 'data'
 

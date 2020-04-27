@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { SVGIcon } from '../SVGIcon'
+import { SVGIcon } from 'shared/SVGIcon'
 
 /**
  * NoTasksBox
