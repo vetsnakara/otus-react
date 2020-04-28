@@ -4,5 +4,5 @@ module.exports = {
     "@babel/react",
     "@babel/typescript"
   ],
-  plugins: ["transform-class-properties"]
+  plugins: ["transform-class-properties", "styled-components"],
 }

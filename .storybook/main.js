@@ -1,6 +1,6 @@
-const path = require('path');
-const webpack = require('webpack');
-const custom = require('../webpack/webpack.common');
+const path = require('path')
+const webpack = require('webpack')
+const custom = require('../webpack/webpack.common')
 
 module.exports = {
   stories: ['../src/**/*.stories.tsx'],
@@ -15,38 +15,39 @@ module.exports = {
       options: {
         configureJSX: true,
         babelOptions: {},
-        sourceLoaderOptions: null,
-      },
-    },
+        sourceLoaderOptions: null
+      }
+    }
   ],
   webpackFinal: (config) => {
-    config.plugins.push(new webpack.HotModuleReplacementPlugin());
+    config.plugins.push(new webpack.HotModuleReplacementPlugin())
 
     config.module.rules.push({
       test: /\.stories\.tsx$/,
       loaders: [
         {
           loader: require.resolve('@storybook/source-loader'),
-          options: { parser: 'typescript' },
-        },
+          options: { parser: 'typescript' }
+        }
       ],
-      enforce: 'pre',
-    });
+      enforce: 'pre'
+    })
+
     config.module.rules.push({
       test: /\.tsx?$/,
-      include: path.resolve(__dirname, "../src"),
+      include: path.resolve(__dirname, '../src'),
       use: [
-        require.resolve("babel-loader"),
+        require.resolve('babel-loader'),
         {
-          loader: require.resolve("react-docgen-typescript-loader"),
+          loader: require.resolve('react-docgen-typescript-loader'),
           options: {
             // Provide the path to your tsconfig.json so that your stories can
             // display types from outside each individual story.
-            tsconfigPath: path.resolve(__dirname, "../tsconfig.json"),
-          },
-        },
-      ],
-    });
+            tsconfigPath: path.resolve(__dirname, '../tsconfig.json')
+          }
+        }
+      ]
+    })
 
     // 2b. Run `source-loader` on story files to show their source code
     // automatically in `DocsPage` or the `Source` doc block.
@@ -54,19 +55,18 @@ module.exports = {
       test: /\.(stories|story)\.[tj]sx?$/,
       loader: require.resolve('@storybook/source-loader'),
       exclude: [/node_modules/],
-      enforce: 'pre',
-    });
+      enforce: 'pre'
+    })
 
-    return {
+    const newConfig = {
       ...config,
       resolve: custom.resolve,
       module: {
         ...config.module,
-        rules: [
-          ...config.module.rules,
-          ...custom.module.rules
-        ],
-      },
-    };
-  },
-};
+        rules: [...config.module.rules, ...custom.module.rules]
+      }
+    }
+
+    return newConfig
+  }
+}

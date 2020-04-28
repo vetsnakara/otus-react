@@ -12,8 +12,29 @@
   "rules": {
     "prettier/prettier": "error",
     "@typescript-eslint/explicit-function-return-type": 0,
-    "react/prop-types": 0
+    "react/prop-types": 0,
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "ExportDefaultDeclaration",
+        "message": "Restricted default export, prefer namded exports!"
+      }
+    ],
+    "no-console": [
+      "error",
+      {
+        "allow": ["warn", "error"]
+      }
+    ]
   },
+  "overrides": [
+    {
+      "files": ["*.stories.tsx"],
+      "rules": {
+        "no-restricted-syntax": "off"
+      }
+    }
+  ],
   "settings": {
     "react": {
       "version": "detect"

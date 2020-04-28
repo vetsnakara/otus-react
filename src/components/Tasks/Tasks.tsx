@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
 
-import type { TaskListProps, TaskListItemData } from '../../interfaces'
+import type { TaskListProps, TaskListItemData } from 'types'
 
-import Icon from '../SVGIcon'
-
-import './styles.scss'
+import { NoTasksBox, NoTasksIcon } from './styles'
 
 type ListComponentInterface = React.FC<TaskListProps>
 
@@ -62,13 +60,11 @@ export class Tasks extends Component<TasksProps, TasksState> {
 
     if (tasks.length === 0) {
       return (
-        <section className="tasks__no-tasks-box" data-test="no-tasks-message">
-          <div className="tasks__no-tasks-icon">
-            <Icon name="check" />
-          </div>
+        <NoTasksBox>
+          <NoTasksIcon name="check" />
           <h2>You have no tasks</h2>
           <p>Sit back and relax</p>
-        </section>
+        </NoTasksBox>
       )
     }
 
@@ -81,5 +77,3 @@ export class Tasks extends Component<TasksProps, TasksState> {
     )
   }
 }
-
-export default Tasks

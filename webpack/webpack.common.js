@@ -21,13 +21,17 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.(woff(2)?|ttf|eot|svg)$/,
         use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader',
-        ],
-      },
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts',
+            }
+          }
+        ]
+      }
     ]
   },
 
@@ -35,15 +39,22 @@ module.exports = {
     new CleanWebpackPlugin(),
 
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './public/index.html'
     }),
 
     new CopyWebpackPlugin([
-      { from: 'src/favicon.ico' }
+      { from: './public/favicon.ico' }
     ])
   ],
 
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json']
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
+    alias: {
+      types: path.resolve(__dirname, "../src/types"),
+      data: path.resolve(__dirname, "../data"),
+      test: path.resolve(__dirname, "../test"),
+      assets: path.resolve(__dirname, '../src/assets'),
+      shared: path.resolve(__dirname, '../src/components/shared'),
+    }
   }
 }

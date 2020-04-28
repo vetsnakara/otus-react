@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 import { createInterface } from 'readline'
 
 import { runner } from './runner'

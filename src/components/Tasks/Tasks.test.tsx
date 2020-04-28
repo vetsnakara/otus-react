@@ -1,11 +1,15 @@
 import React from 'react'
-import { mount } from 'enzyme'
+import { mount, ReactWrapper } from 'enzyme'
+import renderer from 'react-test-renderer'
 
-import Tasks from './Tasks'
-import TaskList from '../TaskList'
+import { Tasks } from './Tasks'
+import { TaskList } from './components/TaskList'
 
-import { getTasks } from '../../data'
-import { findByDataAttr } from '../../../internals/testUtils'
+import { getTasks } from 'data'
+
+const getTasksState = (wrapper: ReactWrapper) => {
+  return wrapper.state('tasks') as Array<{ completed: boolean }>
+}
 
 describe('Tasks', () => {
   test('State is correct', () => {
@@ -13,9 +17,22 @@ describe('Tasks', () => {
       titles: ['One', 'Two', 'Three']
     })
 
-    const wrapper = mount(<Tasks tasks={tasks} ListComponent={TaskList} />)
+    const element = <Tasks tasks={tasks} ListComponent={TaskList} />
+    const wrapper = mount(element)
+    const snapshot = renderer.create(element).toJSON()
 
+    expect(snapshot).toMatchSnapshot()
     expect(wrapper.instance().state).toEqual({ tasks })
+  })
+
+  test('NoTasksBox is rendered when no tasks passed', () => {
+    const element = <Tasks tasks={[]} ListComponent={TaskList} />
+    const wrapper = mount(element)
+    const snapshot = renderer.create(element).toJSON()
+
+    expect(snapshot).toMatchSnapshot()
+    expect(wrapper.find('TaskList').length).toBe(0)
+    expect(wrapper.find('NoTasksBox').length).toBe(1)
   })
 
   test('Toggle task correct', () => {
@@ -25,21 +42,30 @@ describe('Tasks', () => {
 
     const spy = jest.spyOn(Tasks.prototype, 'handleToggleComplete')
 
-    const wrapper = mount(<Tasks tasks={tasks} ListComponent={TaskList} />)
+    const element = <Tasks tasks={tasks} ListComponent={TaskList} />
+    const wrapper = mount(element)
+    const snapshot = renderer.create(element).toJSON()
 
-    const index = 1
+    expect(snapshot).toMatchSnapshot()
 
-    expect(wrapper.state('tasks')[index].completed).toBe(false)
+    const taskIndex = 1
 
-    const task = findByDataAttr(wrapper, 'task').at(index)
-    const toggleButton = findByDataAttr(task, 'task-toggle-btn')
+    let tasksState = getTasksState(wrapper)
+    expect(tasksState[taskIndex].completed).toBe(false)
+
+    const toggleButton = wrapper
+      .find('Task')
+      .at(taskIndex)
+      .find('ToggleButton')
+      .childAt(0)
 
     // click to complete task
     toggleButton.simulate('click')
     expect(spy).toHaveBeenCalledTimes(1)
-    expect(spy).toHaveBeenCalledWith(tasks[index].id)
+    expect(spy).toHaveBeenCalledWith(tasks[taskIndex].id)
 
-    expect(wrapper.state('tasks')[index].completed).toBe(true)
+    tasksState = getTasksState(wrapper)
+    expect(tasksState[taskIndex].completed).toBe(true)
   })
 
   test('Remove task correct', () => {
@@ -49,20 +75,27 @@ describe('Tasks', () => {
 
     const spy = jest.spyOn(Tasks.prototype, 'handleRemove')
 
-    const wrapper = mount(<Tasks tasks={tasks} ListComponent={TaskList} />)
+    const element = <Tasks tasks={tasks} ListComponent={TaskList} />
+    const wrapper = mount(element)
+    const snapshot = renderer.create(element).toJSON()
 
-    const index = 1
+    expect(snapshot).toMatchSnapshot()
 
-    const task = findByDataAttr(wrapper, 'task').at(index)
-    const toggleButton = findByDataAttr(task, 'task-remove-btn')
+    const taskIndex = 1
+
+    const removeButton = wrapper
+      .find('Task')
+      .at(taskIndex)
+      .find('RemoveButton')
+      .childAt(0)
 
     let stateTasks: Array<{ id: string }> = wrapper.state('tasks')
     expect(stateTasks.length).toBe(tasks.length)
 
     // click to remove
-    toggleButton.simulate('click')
+    removeButton.simulate('click')
     expect(spy).toHaveBeenCalledTimes(1)
-    expect(spy).toHaveBeenCalledWith(tasks[index].id)
+    expect(spy).toHaveBeenCalledWith(tasks[taskIndex].id)
 
     // length = length - 1
     stateTasks = wrapper.state('tasks')
@@ -70,7 +103,7 @@ describe('Tasks', () => {
 
     // no task with specified id
     expect(
-      stateTasks.find((task) => task.id === tasks[index].id)
+      stateTasks.find((task) => task.id === tasks[taskIndex].id)
     ).toBeUndefined()
   })
 })
