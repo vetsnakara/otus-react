@@ -1,0 +1,18 @@
+.tasks {
+  &__no-tasks-box {
+    background-color: #fff;
+    text-align: center;
+    padding: 100px;
+  }
+
+  &__no-tasks-icon {
+    & > svg {
+      width: 40px;
+      height: 40px;
+
+      & > path {
+        fill: #26c6da
+      }
+    }
+  }
+}

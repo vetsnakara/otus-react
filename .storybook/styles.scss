@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.8)
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #26c6da;
+}
+
+.container {
+  max-width: 800px;
+  padding: 20px;
+  margin: 0 auto;
+}

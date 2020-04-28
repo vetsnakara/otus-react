@@ -10,10 +10,13 @@ import { Token, TokenType, Operation } from './types'
 
 // unary operations **, !
 export function evaluateUnary(expr: Token[]): Token[] {
-  return expr.reduce((acc, token) => {
+  return expr.reduce((acc: Token[], token: Token) => {
     if (token.type === TokenType.OP_UNARY) {
       const operation = mathOperators[token.value] as UnaryOperationType
-      return [...acc, getToken([TokenType.NUMBER, operation(token.operand)])]
+      return [
+        ...acc,
+        getToken([TokenType.NUMBER, operation(token.operand as number)])
+      ]
     }
 
     return [...acc, token]

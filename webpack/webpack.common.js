@@ -5,7 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
-  entry: './src/index.ts',
+  entry: './src/index.tsx',
 
   output: {
     path: path.resolve(__dirname, '..', 'build'),
@@ -19,7 +19,15 @@ module.exports = {
         test: /\.(js|ts)x?$/,
         loader: 'babel-loader',
         exclude: /node_modules/
-      }
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader',
+        ],
+      },
     ]
   },
 
